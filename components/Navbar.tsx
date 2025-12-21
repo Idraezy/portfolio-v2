@@ -36,7 +36,7 @@ export default function Navbar() {
   // Track active section on scroll
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "projects", "contact"];
+      const sections = ["about", "projects", "contact"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -59,7 +59,7 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { name: "Home", id: "home" },
+    // { name: "Home", id: "home" },
     { name: "About", id: "about" },
     { name: "Projects", id: "projects" },
     { name: "Contact", id: "contact" }
