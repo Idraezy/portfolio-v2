@@ -137,7 +137,8 @@ export default function Home() {
   initial={{ opacity: 0, y: 30 }}
   animate={{ opacity: 1, y: 0 }}
 >
-  <motion.button
+  <motion.a
+    href="mailto:idraezynoks@gmail.com"
     onClick={scrollToContact}
     whileHover={{ scale: 1.05 }}
     className="border-2 border-orange-400 text-orange-400 px-4 py-2 sm:px-6 sm:py-3 
@@ -145,7 +146,7 @@ export default function Home() {
                transition-all rounded-full flex items-center justify-center gap-2 cursor-pointer text-center"
   >
     Contact me <Send size={18} />
-  </motion.button>
+  </motion.a>
 
   <motion.a
     href="/Idara_Etim_Resume_Updated.pdf"
