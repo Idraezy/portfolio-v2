@@ -76,7 +76,7 @@ export default function AboutSection() {
           {activeTab === "personal" && (
             <motion.div key="personal" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="max-w-6xl mx-auto">
               <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start">
-                <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: "easeOut" }} viewport={{ once: true, amount: 0.3 }} className="flex justify-center w-full sm:w-auto lg:w-auto flex-shrink-0">
+                <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: "easeOut" }} viewport={{ once: true, amount: 0.3 }} className="flex justify-center w-full sm:w-auto lg:w-auto ">
                   <div className="w-64 h-64 sm:w-64 sm:h-64 rounded-full overflow-hidden border-2 border-gray-400">
                     <img src="/prof.jpg" alt="Idara Etim" className="w-full h-full object-cover" />
                   </div>
@@ -105,7 +105,7 @@ export default function AboutSection() {
             <motion.div key="experience" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="max-w-6xl mx-auto">
               <h2 className="text-2xl sm:text-3xl font-bold mb-8 flex items-center gap-3"><BriefcaseBusiness className="text-orange-400" />My Experience</h2>
               <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
-                <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: "easeOut" }} viewport={{ once: true, amount: 0.3 }} className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-gray-400 flex-shrink-0">
+                <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: "easeOut" }} viewport={{ once: true, amount: 0.3 }} className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-gray-400 ">
                   <img src="/prof.jpg" alt="Profile" className="w-full h-full object-cover" />
                 </motion.div>
                 <div className="flex-1 text-center lg:text-left space-y-6">
