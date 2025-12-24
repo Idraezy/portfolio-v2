@@ -5,7 +5,7 @@ import Home from "./sections/Home";
 // import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
-import AboutSection from "./sections/AboutSection";
+import AboutSection from "./sections/About";
 import Footer from "./sections/Footer";
 
 export default function Page() {

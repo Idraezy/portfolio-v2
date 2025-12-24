@@ -20,7 +20,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#011C2A] w-full py-8 flex flex-col items-center justify-center">
+    <footer className="bg-[#011C2A] w-full py-8 flex flex-col items-center justify-center mt-0">
       {/* Social Icons */}
       <motion.div
         className="flex gap-6 justify-center items-center mb-4"
@@ -63,6 +63,8 @@ export default function Footer() {
       <p className="text-gray-400 text-sm">
         &copy; {new Date().getFullYear()} Idara Etim. All rights reserved.
       </p>
+    
     </footer>
+
   );
 }

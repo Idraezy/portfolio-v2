@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { LayoutDashboard, Menu, X } from "lucide-react";
+import { LayoutDashboard, X } from "lucide-react";
 
 export default function Navbar() {
   const [currentTime, setCurrentTime] = useState("");
   const [tagline, setTagline] = useState("");
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -33,11 +33,17 @@ export default function Navbar() {
     return () => clearInterval(interval);
   }, []);
 
-  // Track active section on scroll
+  // Track active section on scroll with improved logic
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["about", "projects", "contact"];
       const scrollPosition = window.scrollY + 100;
+
+      // If at the very top, clear active section
+      if (window.scrollY < 100) {
+        setActiveSection("");
+        return;
+      }
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -59,7 +65,6 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    // { name: "Home", id: "home" },
     { name: "About", id: "about" },
     { name: "Projects", id: "projects" },
     { name: "Contact", id: "contact" }
