@@ -140,8 +140,8 @@ export default function Projects() {
 };
 
   return (
-    <section id="projects" className="min-h-screen bg-lightBg dark:bg-[#011C2A] text-lightText dark:text-darkText transition-colors duration-300 pt-24 md:pt-28 lg:pt-32 pb-16">
-      <div className="mx-4 sm:mx-6 md:mx-10 lg:mx-14 xl:mx-20">
+    <section id="projects" className="min-h-screen bg-lightBg dark:bg-[#011C2A] text-lightText dark:text-darkText transition-colors duration-300 pt-24 md:pt-28 lg:pt-32 pb-16 ">
+      <div className="mx-4 sm:mx-6 md:mx-10 lg:mx-14 xl:mx-20 ">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }} 
@@ -149,8 +149,8 @@ export default function Projects() {
           transition={{ duration: 0.8 }} 
           className="mb-12"
         >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold dark:text-orange-400">
+          <div className="flex items-center justify-center gap-3 mb-4 ">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-400">
               My Projects
             </h1>
             <Code2 className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-orange-400" />
