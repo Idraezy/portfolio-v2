@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { ExternalLink, Github, Filter, Search, Code2, ArrowUp, Layers } from 'lucide-react';
 
 const projects = [
@@ -81,7 +81,7 @@ const projects = [
 
 const categories = ["All", "Frontend", "Blockchain", "Design"];
 
-const techDescriptions = {
+const techDescriptions: Record<string, string> = {
   "Figma": "UI/UX Design Tool",
   "React": "JavaScript Library",
   "TypeScript": "Typed JavaScript",
@@ -122,22 +122,22 @@ export default function Projects() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.05 } }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 10 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { 
-        duration: 0.2,
-        ease: "easeOut"
-      } 
-    }
-  };
+ const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.2,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
 
   return (
     <section id="projects" className="min-h-screen bg-lightBg dark:bg-[#011C2A] text-lightText dark:text-darkText transition-colors duration-300 pt-24 md:pt-28 lg:pt-32 pb-16">

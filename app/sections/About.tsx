@@ -1,7 +1,7 @@
 "use client"
 
 
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   UserRound,
@@ -15,7 +15,12 @@ import {
   Blend,
 } from "lucide-react";
 
-function Info({ icon, text }) {
+type InfoProps = {
+  icon: ReactNode;
+  text: string;
+};
+
+function Info({ icon, text }: InfoProps) {
   return (
     <div className="flex items-center gap-3 text-gray-400">
       <span className="text-orange-400">{icon}</span>
