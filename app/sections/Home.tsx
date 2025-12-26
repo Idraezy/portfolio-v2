@@ -120,7 +120,7 @@ export default function Home() {
           {/* Name */}
           <motion.h1
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold 
-                       text-[#001D2A] dark:text-orange-400 
+                        text-orange-400 
                        text-center lg:text-left mt-2"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}

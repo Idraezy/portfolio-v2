@@ -155,7 +155,7 @@ export default function Projects() {
             </h1>
             <Code2 className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-orange-400" />
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl dark:text-gray-400 font-semibold text-center">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 font-semibold text-center">
             A collection of my recent work in Frontend development, Blockchain, and Design.
           </p>
         </motion.div>
@@ -174,7 +174,7 @@ export default function Projects() {
               placeholder="Search projects..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 rounded-full dark:bg-[#012b40] border-2 border-gray-200 dark:border-orange-400/30 dark:text-gray-400 placeholder-gray-400 focus:outline-none focus:border-orange-400 transition-all duration-300"
+              className="w-full pl-12 pr-4 py-3 rounded-full bg-[#012b40] border-2 border-orange-400/30 text-gray-400 placeholder-gray-400 focus:outline-none focus:border-orange-400 transition-all duration-300"
             />
           </div>
         </motion.div>
@@ -188,7 +188,7 @@ export default function Projects() {
         >
           <div className="flex items-center gap-2 mb-4">
             <Filter className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400" />
-            <span className="text-xs sm:text-sm font-semibold dark:text-gray-400">Filter by:</span>
+            <span className="text-xs sm:text-sm font-semibold text-gray-400">Filter by:</span>
           </div>
           <div className="flex flex-wrap gap-2 sm:gap-3">
             {categories.map((category) => (
@@ -198,7 +198,7 @@ export default function Projects() {
                 className={`px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 border-2 ${
                   selectedCategory === category
                     ? 'bg-orange-400 text-white border-orange-400 cursor-pointer'
-                    : 'bg-transparent border-[#111827] dark:text-orange-400 hover:bg-orange-400 hover:text-white hover:border-orange-400 dark:hover:text-white cursor-pointer'
+                    : 'bg-transparent border-[#111827] text-orange-400 hover:bg-orange-400  hover:border-orange-400 hover:text-white cursor-pointer'
                 }`}
               >
                 {category}
@@ -211,7 +211,7 @@ export default function Projects() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="mb-6 flex items-center gap-2 text-sm dark:text-gray-400"
+          className="mb-6 flex items-center gap-2 text-sm text-gray-400"
         >
           <Layers className="w-4 h-4 text-orange-400" />
           <span>Showing <span className="font-bold text-orange-400">{filteredProjects.length}</span> of <span className="font-bold">{projects.length}</span> projects</span>
@@ -236,7 +236,7 @@ export default function Projects() {
                 transition: { duration: 0.3 }
               }}
               whileTap={{ scale: 0.98 }}
-              className="group relative bg-white dark:bg-[#012b40] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="group relative bg-[#012b40] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
               style={{ transformStyle: 'preserve-3d' }}
             >
               {/* Animated Border Glow */}
@@ -257,7 +257,7 @@ export default function Projects() {
               />
 
               {/* Project Image */}
-              <div className="relative h-40 sm:h-48 overflow-hidden bg-gray-200 dark:bg-gray-700">
+              <div className="relative h-40 sm:h-48 overflow-hidden bg-gray-700">
                 <motion.img
                   src={project.image}
                   alt={project.title}
@@ -289,13 +289,13 @@ export default function Projects() {
               {/* Project Content */}
               <div className="p-4 sm:p-6 relative z-10">
                 <motion.h3 
-                  className="text-lg sm:text-xl font-bold text-black dark:text-orange-400 mb-2"
+                  className="text-lg sm:text-xl font-bold text-orange-400 mb-2"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
                   {project.title}
                 </motion.h3>
-                <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                <p className="text-xs sm:text-sm text-gray-400 mb-4 leading-relaxed line-clamp-3">
                   {project.description}
                 </p>
 
@@ -311,7 +311,7 @@ export default function Projects() {
                         scale: 1.1,
                         backgroundColor: 'rgba(251, 146, 60, 0.3)'
                       }}
-                      className="relative group/tech px-2 sm:px-3 py-0.5 sm:py-1 text-xs font-semibold bg-orange-100 dark:bg-orange-400/20 text-orange-600 dark:text-orange-400 rounded-full cursor-default"
+                      className="relative group/tech px-2 sm:px-3 py-0.5 sm:py-1 text-xs font-semibold bg-orange-400/20 text-orange-400 rounded-full cursor-default"
                       title={techDescriptions[tech] || tech}
                     >
                       {tech}
@@ -345,7 +345,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 border-2 border-[#111827] dark:border-orange-400 text-black dark:text-orange-400 rounded-full font-semibold hover:bg-orange-400 dark:hover:text-white hover:text-white hover:border-orange-400 transition-all duration-300 text-xs sm:text-sm"
+                      className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 border-2 border-orange-400 text-orange-400 rounded-full font-semibold hover:bg-orange-400 hover:text-white  hover:border-orange-400 transition-all duration-300 text-xs sm:text-sm"
                     >
                       <Github className="w-3 h-3 sm:w-4 sm:h-4" /> 
                       <span>Code</span>
@@ -390,7 +390,7 @@ export default function Projects() {
             href="https://github.com/Idraezy"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border-2 border-orange-400 dark:text-orange-400 rounded-full font-semibold hover:bg-orange-400 hover:text-white transition-all duration-300"
+            className="inline-flex items-center gap-2 px-6 py-3 border-2 border-orange-400 text-orange-400 rounded-full font-semibold hover:bg-orange-400 hover:text-white transition-all duration-300"
           >
             <Github className="w-5 h-5" />
             <span>View All Projects on GitHub</span>
@@ -416,7 +416,7 @@ export default function Projects() {
       </AnimatePresence>
 
       {/* Bottom Gradient Separator */}
-      <div className="bg-lightBg dark:bg-[#011C2A] px-4 sm:px-6 lg:px-8 mt-16">
+      <div className="bg-[#011C2A] px-4 sm:px-6 lg:px-8 mt-16">
         <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
