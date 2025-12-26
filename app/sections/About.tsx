@@ -63,7 +63,7 @@ export default function AboutSection() {
 
   return (
     <>
-      <section id="about" className="min-h-screen bg-[#011C2A] text-gray-400 px-4 sm:px-8 py-16 transition-colors duration-300">
+      <section id="about" className="min-h-screen bg-[#011C2A] text-gray-400 px-4 sm:px-8 py-16 transition-colors duration-300 pt-24 md:pt-28 lg:pt-32 scroll-mt-24">
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
           <header className="flex justify-center items-center text-2xl font-bold sm:text-3xl md:text-3xl lg:text-4xl gap-3 mb-8">
             About Me <Blend className="text-orange-400 inline" />

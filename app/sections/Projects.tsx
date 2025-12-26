@@ -140,7 +140,7 @@ export default function Projects() {
 };
 
   return (
-    <section id="projects" className="min-h-screen bg-lightBg dark:bg-[#011C2A] text-lightText dark:text-darkText transition-colors duration-300 pt-24 md:pt-28 lg:pt-32 pb-16 ">
+    <section id="projects" className="min-h-screen bg-[#011C2A] text-darkText transition-colors duration-300 pt-24 md:pt-28 lg:pt-32 pb-16 ">
       <div className="mx-4 sm:mx-6 md:mx-10 lg:mx-14 xl:mx-20 ">
         {/* Header */}
         <motion.div 

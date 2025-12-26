@@ -26,22 +26,50 @@ export default function Home() {
   const [letterIndex, setLetterIndex] = useState(0);
   const [cursorVisible, setCursorVisible] = useState(true);
 
+  // useEffect(() => {
+  //   if (letterIndex < professions[current].length) {
+  //     const interval = setInterval(() => {
+  //       setText((prev) => prev + professions[current][letterIndex]);
+  //       setLetterIndex((prev) => prev + 1);
+  //     }, 100);
+  //     return () => clearInterval(interval);
+  //   } else {
+  //     const timeout = setTimeout(() => {
+  //       setText("");
+  //       setLetterIndex(0);
+  //       setCurrent((prev) => (prev + 1) % professions.length);
+  //     }, 3000);
+  //     return () => clearTimeout(timeout);
+  //   }
+  // }, [letterIndex, current]);
+
+
+
   useEffect(() => {
-    if (letterIndex < professions[current].length) {
-      const interval = setInterval(() => {
-        setText((prev) => prev + professions[current][letterIndex]);
-        setLetterIndex((prev) => prev + 1);
-      }, 100);
-      return () => clearInterval(interval);
-    } else {
-      const timeout = setTimeout(() => {
-        setText("");
-        setLetterIndex(0);
-        setCurrent((prev) => (prev + 1) % professions.length);
-      }, 3000);
-      return () => clearTimeout(timeout);
-    }
-  }, [letterIndex, current]);
+  const currentWord = professions[current];
+
+  const interval = setInterval(() => {
+    setText((prev) => {
+      if (prev.length === currentWord.length) {
+        return prev;
+      }
+      return currentWord.slice(0, prev.length + 1);
+    });
+  }, 100);
+
+  if (text.length === currentWord.length) {
+    clearInterval(interval);
+    const timeout = setTimeout(() => {
+      setText("");
+      setCurrent((prev) => (prev + 1) % professions.length);
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }
+
+  return () => clearInterval(interval);
+}, [text, current]);
+
 
   useEffect(() => {
     const interval = setInterval(() => setCursorVisible((prev) => !prev), 500);
@@ -65,7 +93,7 @@ export default function Home() {
     <>
       <motion.section
         id="home"
-        className="min-h-[72vh]  relative bg-lightBg dark:bg-[#011C2A] transition-colors duration-300 flex flex-col justify-start px-4 sm:px-6 lg:px-8 p-16 "
+        className="min-h-[72vh] relative bg-[#011C2A] transition-colors duration-300 flex flex-col justify-start px-4 sm:px-6 lg:px-8 p-16 "
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -133,20 +161,20 @@ export default function Home() {
 
           {/* Buttons */}
           <motion.div
-      className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start"
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
+           className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start"
+           initial={{ opacity: 0, y: 30 }}
+           animate={{ opacity: 1, y: 0 }}
 >
-  <motion.a
-    href="mailto:idraezynoks@gmail.com"
-    onClick={scrollToContact}
-    whileHover={{ scale: 1.05 }}
-    className="border-2 border-orange-400 text-orange-400 px-4 py-2 sm:px-6 sm:py-3 
+          <motion.a
+           href="mailto:idraezynoks@gmail.com"
+           onClick={scrollToContact}
+            whileHover={{ scale: 1.05 }}
+            className="border-2 border-orange-400 text-orange-400 px-4 py-2 sm:px-6 sm:py-3 
                font-semibold hover:bg-orange-400 hover:text-white 
                transition-all rounded-full flex items-center justify-center gap-2 cursor-pointer text-center"
-  >
-    Contact me <Send size={18} />
-  </motion.a>
+       >
+                 Contact me <Send size={18} />
+          </motion.a>
 
   <motion.a
     href="/Idara_Etim_Resume_Updated.pdf"
