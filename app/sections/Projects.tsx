@@ -46,6 +46,17 @@ const projects = [
 
   },
   {
+  id: 8,
+  title: "ClientPilot",
+  description: "A lightweight client management dashboard for freelancers and small businesses to track clients, statuses, and notes in one place.",
+  technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  category: "Frontend",
+  image: "/project8.jpg",
+  liveUrl: "https://client-pilot-mini-app.vercel.app/",
+  githubUrl: "https://github.com/Idraezy/client-pilot"
+},
+
+  {
     id: 4,
     title: "NFT Marketplace",
     description: "Decentralized marketplace for trading NFTs with smart contract integration and wallet connectivity.",
