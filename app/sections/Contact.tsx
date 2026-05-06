@@ -9,7 +9,7 @@ function Contact() {
 
   // Open mail client
   const contactMe = () => {
-    window.location.href = "mailto:idraesynoks@gmail.com";
+    window.location.href = "mailto:idraezynoks@gmail.com";
   };
 
   // Social links
