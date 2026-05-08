@@ -23,7 +23,6 @@ const projects = [
     liveUrl: "https://dali-m2rk.vercel.app/",
     githubUrl: "https://github.com/Idraezy/dali"
   },
-
   {
     id: 2,
     title: "Gym Platform",
@@ -42,7 +41,6 @@ const projects = [
     liveUrl: "#",
     githubUrl: "https://github.com/Idraezy/city-de-fitnessCity"
   },
-
   {
     id: 3,
     title: "NFT Marketplace",
@@ -61,8 +59,6 @@ const projects = [
     liveUrl: "https://nft-marketplace-22.vercel.app/",
     githubUrl: "https://my-nft-marketplace-j1gh.vercel.app/"
   },
-
-  
   {
     id: 4,
     title: "ATS Pro - Resume & ATS Checker",
@@ -80,7 +76,6 @@ const projects = [
     liveUrl: "https://at-sify.vercel.app/",
     githubUrl: "https://github.com/Idraezy/ATSify"
   },
-
   {
     id: 5,
     title: "ApplyNow Admission Portal",
@@ -98,7 +93,6 @@ const projects = [
     liveUrl: "https://applynow-admissions-portal.vercel.app/",
     githubUrl: "https://github.com/Idraezy/applynow-admissions-portal"
   },
-
   {
     id: 6,
     title: "WhatsApp Bot",
@@ -117,7 +111,6 @@ const projects = [
     liveUrl: "https://whatsapp-bot-seven-nu.vercel.app/",
     githubUrl: "https://github.com/Idraezy/Whatsapp-bot"
   },
-
   {
     id: 7,
     title: "NextVest - Investment Platform",
@@ -138,8 +131,6 @@ const projects = [
     liveUrl: "https://nex-vest-alpha.vercel.app/",
     githubUrl: "https://github.com/Idraezy/NexVest"
   },
-
-
   {
     id: 8,
     title: "Landing Page Generator",
@@ -157,7 +148,6 @@ const projects = [
     liveUrl: "https://landing-page-generator-taupe.vercel.app/",
     githubUrl: "https://github.com/Idraezy/Landing-Page-Generator"
   },
-
   {
     id: 9,
     title: "Smart Invoice",
@@ -174,7 +164,6 @@ const projects = [
     liveUrl: "https://smart-invoice-eta.vercel.app/",
     githubUrl: "https://github.com/Idraezy/SmartInvoice"
   },
-
   {
     id: 10,
     title: "ClientPilot",
@@ -191,7 +180,6 @@ const projects = [
     liveUrl: "https://client-pilot-mini-app.vercel.app/",
     githubUrl: "https://github.com/Idraezy/client-pilot"
   },
-
   {
     id: 11,
     title: "Task Management App",
@@ -208,7 +196,6 @@ const projects = [
     liveUrl: "https://idraezy.github.io/profile-card/",
     githubUrl: "https://idraezy.github.io/profile-card/"
   },
-
   {
     id: 12,
     title: "Brand Identity Design",
@@ -224,8 +211,6 @@ const projects = [
     image: "/project3.jpg",
     liveUrl: "#"
   },
-
-  
 ];
 
 const categories = ["All", "Frontend", "Blockchain", "Design"];
@@ -252,15 +237,14 @@ export default function Projects() {
 
   const filteredProjects = projects.filter(project => {
     const matchesCategory = selectedCategory === "All" || project.category === selectedCategory;
-    const matchesSearch = searchQuery === "" || 
+    const matchesSearch = searchQuery === "" ||
       project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.technologies.some(tech => tech.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
     return matchesCategory && matchesSearch;
   });
 
-  // Scroll to top button visibility
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
@@ -278,29 +262,29 @@ export default function Projects() {
     visible: { opacity: 1, transition: { staggerChildren: 0.05 } }
   };
 
- const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 10 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.2,
-      ease: [0.16, 1, 0.3, 1],
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.2,
+        ease: [0.16, 1, 0.3, 1],
+      },
     },
-  },
-};
+  };
 
   return (
-    <section id="projects" className="min-h-screen bg-[#011C2A] text-darkText transition-colors duration-300 pt-24 md:pt-28 lg:pt-32 pb-16 ">
-      <div className="mx-4 sm:mx-6 md:mx-10 lg:mx-14 xl:mx-20 ">
+    <section id="projects" className="min-h-screen bg-[#011C2A] text-darkText transition-colors duration-300 pt-24 md:pt-28 lg:pt-32 pb-16">
+      <div className="mx-4 sm:mx-6 md:mx-10 lg:mx-14 xl:mx-20">
         {/* Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8 }} 
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="mb-12"
         >
-          <div className="flex items-center justify-center gap-3 mb-4 ">
+          <div className="flex items-center justify-center gap-3 mb-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-400">
               My Projects
             </h1>
@@ -331,10 +315,10 @@ export default function Projects() {
         </motion.div>
 
         {/* Category Filter */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, delay: 0.2 }} 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
           <div className="flex items-center gap-2 mb-4">
@@ -349,7 +333,7 @@ export default function Projects() {
                 className={`px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 border-2 ${
                   selectedCategory === category
                     ? 'bg-orange-400 text-white border-orange-400 cursor-pointer'
-                    : 'bg-transparent border-[#111827] text-orange-400 hover:bg-orange-400  hover:border-orange-400 hover:text-white cursor-pointer'
+                    : 'bg-transparent border-[#111827] text-orange-400 hover:bg-orange-400 hover:border-orange-400 hover:text-white cursor-pointer'
                 }`}
               >
                 {category}
@@ -369,21 +353,19 @@ export default function Projects() {
         </motion.div>
 
         {/* Projects Grid */}
-        <motion.div 
-          variants={containerVariants} 
-          initial="hidden" 
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
           animate="visible"
           key={`${selectedCategory}-${searchQuery}`}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
-
-
           {filteredProjects.map((project) => (
-          <motion.div 
-              key={project.id} 
+            <motion.div
+              key={project.id}
               onClick={() => router.push(`/projects/${project.id}`)}
               variants={itemVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
                 rotateY: 5,
                 rotateX: 5,
@@ -400,14 +382,8 @@ export default function Projects() {
                   background: 'linear-gradient(45deg, transparent, rgba(251, 146, 60, 0.3), transparent)',
                   filter: 'blur(10px)',
                 }}
-                animate={{
-                  rotate: [0, 360],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               />
 
               {/* Project Image */}
@@ -419,30 +395,22 @@ export default function Projects() {
                   whileHover={{ scale: 1.15 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
                 />
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
                 />
-                
-                {/* Pulse Effect on Hover */}
                 <motion.div
                   className="absolute inset-0 border-4 border-orange-400 rounded-lg opacity-0"
-                  whileHover={{
-                    opacity: [0, 0.5, 0],
-                    scale: [1, 1.1, 1],
-                  }}
-                  transition={{
-                    duration: 1,
-                    repeat: Infinity,
-                  }}
+                  whileHover={{ opacity: [0, 0.5, 0], scale: [1, 1.1, 1] }}
+                  transition={{ duration: 1, repeat: Infinity }}
                 />
               </div>
 
               {/* Project Content */}
               <div className="p-4 sm:p-6 relative z-10">
-                <motion.h3 
+                <motion.h3
                   className="text-lg sm:text-xl font-bold text-orange-400 mb-2"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
@@ -456,20 +424,16 @@ export default function Projects() {
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
                   {project.technologies.map((tech, index) => (
-                    <motion.span 
+                    <motion.span
                       key={index}
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: index * 0.1 }}
-                      whileHover={{ 
-                        scale: 1.1,
-                        backgroundColor: 'rgba(251, 146, 60, 0.3)'
-                      }}
+                      whileHover={{ scale: 1.1, backgroundColor: 'rgba(251, 146, 60, 0.3)' }}
                       className="relative group/tech px-2 sm:px-3 py-0.5 sm:py-1 text-xs font-semibold bg-orange-400/20 text-orange-400 rounded-full cursor-default"
                       title={techDescriptions[tech] || tech}
                     >
                       {tech}
-                      {/* Tooltip */}
                       <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs bg-gray-900 text-white rounded opacity-0 group-hover/tech:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50">
                         {techDescriptions[tech] || tech}
                       </span>
@@ -480,38 +444,44 @@ export default function Projects() {
                 {/* Action Buttons */}
                 <div className="flex flex-wrap gap-2 sm:gap-3">
                   {project.liveUrl && project.liveUrl !== "#" && (
-                    <motion.a 
-                      href={project.liveUrl} 
-                      target="_blank" 
+                    <motion.a
+                      href={project.liveUrl}
+                      target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
                       whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(251, 146, 60, 0.5)' }}
                       whileTap={{ scale: 0.95 }}
                       className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-400 text-white rounded-full font-semibold hover:bg-orange-500 transition-colors duration-300 text-xs sm:text-sm"
                     >
-                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" /> 
+                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
                       <span>Live Demo</span>
                     </motion.a>
                   )}
                   {project.githubUrl && (
-                    <motion.a 
-                      href={project.githubUrl} 
-                      target="_blank" 
+                    <motion.a
+                      href={project.githubUrl}
+                      target="_blank"
                       rel="noopener noreferrer"
-                       onClick={(e) => e.stopPropagation()}
+                      onClick={(e) => e.stopPropagation()}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 border-2 border-orange-400 text-orange-400 rounded-full font-semibold hover:bg-orange-400 hover:text-white  hover:border-orange-400 transition-all duration-300 text-xs sm:text-sm"
+                      className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 border-2 border-orange-400 text-orange-400 rounded-full font-semibold hover:bg-orange-400 hover:text-white hover:border-orange-400 transition-all duration-300 text-xs sm:text-sm"
                     >
-                      <Github className="w-3 h-3 sm:w-4 sm:h-4" /> 
+                      <Github className="w-3 h-3 sm:w-4 sm:h-4" />
                       <span>Code</span>
                     </motion.a>
                   )}
                 </div>
+
+                {/* Read More hint */}
+                <div className="mt-4 pt-3 border-t border-orange-400/10 flex items-center justify-between">
+                  <span className="text-xs text-gray-500">Click to read more</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-orange-400/50" />
+                </div>
               </div>
 
               {/* Category Badge */}
-              <motion.div 
+              <motion.div
                 className="absolute top-3 sm:top-4 right-3 sm:right-4 px-2 sm:px-3 py-0.5 sm:py-1 bg-orange-400 text-white text-xs font-bold rounded-full shadow-lg"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ duration: 0.2 }}
@@ -519,16 +489,14 @@ export default function Projects() {
                 {project.category}
               </motion.div>
             </motion.div>
-            
           ))}
         </motion.div>
-        
 
         {/* Empty State */}
         {filteredProjects.length === 0 && (
-          <motion.div 
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1 }} 
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             className="text-center py-20"
           >
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400">

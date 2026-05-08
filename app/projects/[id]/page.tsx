@@ -17,13 +17,10 @@ import {
   Zap,
   Globe,
   Code2,
-  Loader2
+  Loader2,
 } from "lucide-react";
-import Image from "next/image";
 
 // ─── Project Data ─────────────────────────────────────────────────────────────
-// Add `screenshots`, `overview`, `keyHighlights`, `role`, and `status` to each project.
-// Set status: "pending" for incomplete projects.
 
 const projects = [
   {
@@ -87,13 +84,13 @@ const projects = [
     role: "Full-Stack Web3 Developer (Solo)",
     status: "pending",
     keyHighlights: [
-      "Designed and implemented three Solidity contracts to NFTCollectionFactory, NFTCollection (ERC-721), and Marketplace",
+      "Designed and implemented three Solidity contracts: NFTCollectionFactory, NFTCollection (ERC-721), and Marketplace",
       "Enabled users to deploy new NFT collections directly from the dApp via the factory contract",
       "Implemented fixed-price listings, auctions, and cross-collection trading with role-based permissions",
       "Built custom on-chain event indexer (Node.js + Express + MongoDB) to sync decentralised events with off-chain queries",
       "Integrated wallet connectivity using Hardhat/Ethers, WalletConnect, Wagmi, and Viem",
       "Stored NFT metadata and assets on IPFS via Pinata",
-      "Deployed frontend and backend on Vercel and backend on Render",
+      "Deployed frontend on Vercel and backend on Render",
     ],
   },
   {
@@ -302,7 +299,8 @@ const projects = [
   },
 ];
 
-// ─── Lightbox Component ───────────────────────────────────────────────────────
+// ─── Lightbox ─────────────────────────────────────────────────────────────────
+
 function Lightbox({
   images,
   currentIndex,
@@ -348,7 +346,6 @@ function Lightbox({
             alt={`Screenshot ${currentIndex + 1}`}
             className="w-full rounded-2xl shadow-2xl object-contain max-h-[80vh]"
           />
-          {/* Controls */}
           <button
             onClick={onClose}
             className="absolute -top-4 -right-4 p-2 bg-orange-400 text-white rounded-full hover:bg-orange-500 transition-colors shadow-lg"
@@ -381,6 +378,7 @@ function Lightbox({
 }
 
 // ─── Tech Badge ───────────────────────────────────────────────────────────────
+
 const techColors: Record<string, string> = {
   Solidity: "bg-purple-500/20 text-purple-300 border-purple-500/40",
   "Tailwind CSS": "bg-sky-500/20 text-sky-300 border-sky-500/40",
@@ -395,15 +393,14 @@ function TechBadge({ tech }: { tech: string }) {
   const colorClass =
     techColors[tech] ?? "bg-orange-400/20 text-orange-300 border-orange-400/40";
   return (
-    <span
-      className={`px-3 py-1 rounded-full text-xs font-semibold border ${colorClass}`}
-    >
+    <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${colorClass}`}>
       {tech}
     </span>
   );
 }
 
-// ─── Main Page ────────────────────────────────────────────────────────────────
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
 export default function ProjectDetailPage() {
   const params = useParams();
   const router = useRouter();
@@ -452,6 +449,7 @@ export default function ProjectDetailPage() {
       )}
 
       <div className="mx-4 sm:mx-6 md:mx-10 lg:mx-14 xl:mx-20 max-w-6xl">
+
         {/* Back Button */}
         <motion.button
           initial={{ opacity: 0, x: -20 }}
@@ -476,7 +474,6 @@ export default function ProjectDetailPage() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
                 {project.title}
               </h1>
-              {/* Status badge */}
               {isPending ? (
                 <span className="flex items-center gap-1.5 px-3 py-1 bg-yellow-500/15 border border-yellow-500/40 text-yellow-400 rounded-full text-xs font-bold uppercase tracking-wide">
                   <Clock className="w-3.5 h-3.5" />
@@ -546,28 +543,21 @@ export default function ProjectDetailPage() {
             <p className="text-sm text-gray-300 font-medium">{project.role}</p>
           </div>
           <div>
-  <p className="text-xs text-gray-500 uppercase tracking-widest mb-1 font-semibold">
-    Status
-  </p>
-
-  <p
-    className={`text-sm font-semibold flex items-center gap-2 ${
-      isPending ? "text-yellow-400" : "text-green-400"
-    }`}
-  >
-    {isPending ? (
-      <>
-        <Loader2 className="w-4 h-4 animate-spin" />
-        In Development
-      </>
-    ) : (
-      <>
-        <CheckCircle className="w-4 h-4" />
-        Deployed
-      </>
-    )}
-  </p>
-</div>
+            <p className="text-xs text-gray-500 uppercase tracking-widest mb-1 font-semibold">Status</p>
+            <p className={`text-sm font-semibold flex items-center gap-2 ${isPending ? "text-yellow-400" : "text-green-400"}`}>
+              {isPending ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  In Development
+                </>
+              ) : (
+                <>
+                  <CheckCircle className="w-4 h-4" />
+                  Deployed
+                </>
+              )}
+            </p>
+          </div>
           <div>
             <p className="text-xs text-gray-500 uppercase tracking-widest mb-1 font-semibold">Category</p>
             <p className="text-sm text-orange-400 font-medium">{project.category}</p>
@@ -598,6 +588,7 @@ export default function ProjectDetailPage() {
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
           {/* Main Column */}
           <div className="lg:col-span-2 space-y-10">
 
@@ -669,7 +660,7 @@ export default function ProjectDetailPage() {
                     initial={{ opacity: 0, x: -15 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.35, delay: 0.4 + i * 0.05 }}
-                    className="flex items-start gap-3 p-4 rounded-xl bg-[#012b40] border border-orange-400/10 group hover:border-orange-400/30 transition-colors"
+                    className="flex items-start gap-3 p-4 rounded-xl bg-[#012b40] border border-orange-400/10 hover:border-orange-400/30 transition-colors"
                   >
                     <div className="mt-0.5 w-5 h-5 rounded-full bg-orange-400/20 flex items-center justify-center flex-shrink-0">
                       <Zap className="w-3 h-3 text-orange-400" />
@@ -683,6 +674,7 @@ export default function ProjectDetailPage() {
 
           {/* Sidebar */}
           <div className="space-y-6">
+
             {/* Tech Stack */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
