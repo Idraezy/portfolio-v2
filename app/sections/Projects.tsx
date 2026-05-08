@@ -8,85 +8,222 @@ const projects = [
   {
     id: 1,
     title: "E-Commerce Platform",
-    description: "A full-featured e-commerce platform with cart functionality, payment integration, and admin dashboard.",
-    technologies: ["Figma","React", "TypeScript", "Tailwind CSS", "Framer-motion"],
+    description:
+      "A full-featured e-commerce platform with cart functionality, payment integration, and admin dashboard.",
+    technologies: [
+      "Figma",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
     category: "Frontend",
     image: "/project1.jpg",
     liveUrl: "https://dali-m2rk.vercel.app/",
     githubUrl: "https://github.com/Idraezy/dali"
   },
+
   {
     id: 2,
+    title: "Gym Platform",
+    description:
+      "A modern fitness and gym platform focused on premium UI/UX, responsive layouts, animated interactions, and engaging user experience for fitness brands and communities.",
+    technologies: [
+      "Figma",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Lucide React"
+    ],
+    category: "Frontend",
+    image: "/gym-platform.jpg",
+    liveUrl: "#",
+    githubUrl: "https://github.com/Idraezy/city-de-fitnessCity"
+  },
+
+  {
+    id: 3,
+    title: "NFT Marketplace",
+    description:
+      "Decentralized marketplace for trading NFTs with smart contract integration and wallet connectivity.",
+    technologies: [
+      "Figma",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Solidity",
+      "Framer Motion"
+    ],
+    category: "Blockchain",
+    image: "/project2.jpg",
+    liveUrl: "https://nft-marketplace-22.vercel.app/",
+    githubUrl: "https://my-nft-marketplace-j1gh.vercel.app/"
+  },
+
+  
+  {
+    id: 4,
     title: "ATS Pro - Resume & ATS Checker",
-    description: "A frontend application that analyzes resumes against job descriptions and provides intelligent suggestions.",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "LocalStorage"],
+    description:
+      "A frontend application that analyzes resumes against job descriptions and provides intelligent suggestions.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "LocalStorage"
+    ],
     category: "Frontend",
     image: "/project5.jpg",
     liveUrl: "https://at-sify.vercel.app/",
-    githubUrl: "https://github.com/Idraezy/ATSify",
+    githubUrl: "https://github.com/Idraezy/ATSify"
   },
+
   {
-    id: 3,
+    id: 5,
+    title: "ApplyNow Admission Portal",
+    description:
+      "A multi-step university admission platform developed during my FlexiSAF internship. The system allows applicants to submit personal, academic, and guardian information while enabling administrators to review and manage applications efficiently.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "JSON Server",
+      "Axios",
+      "React Router"
+    ],
+    category: "Frontend",
+    image: "/applynow.jpg",
+    liveUrl: "https://applynow-admissions-portal.vercel.app/",
+    githubUrl: "https://github.com/Idraezy/applynow-admissions-portal"
+  },
+
+  {
+    id: 6,
+    title: "WhatsApp Bot",
+    description:
+      "A WhatsApp-inspired messaging interface focused on fast UI interactions, AI-ready architecture, and future AI agent integrations with real-time styled conversations.",
+    technologies: [
+      "Figma",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Lucide React"
+    ],
+    category: "Frontend",
+    image: "/whatsapp-bot.jpg",
+    liveUrl: "https://whatsapp-bot-seven-nu.vercel.app/",
+    githubUrl: "https://github.com/Idraezy/Whatsapp-bot"
+  },
+
+  {
+    id: 7,
+    title: "NextVest - Investment Platform",
+    description:
+      "A modern investment platform built with React and Solidity, featuring real-time market data, investment tracking, and scalable blockchain-powered architecture for digital investing.",
+    technologies: [
+      "Figma",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Lucide React",
+      "Solidity",
+      "Supabase"
+    ],
+    category: "Blockchain",
+    image: "/nextvest.jpg",
+    liveUrl: "https://nex-vest-alpha.vercel.app/",
+    githubUrl: "https://github.com/Idraezy/NexVest"
+  },
+
+
+  {
+    id: 8,
     title: "Landing Page Generator",
-    description: "AI-powered landing page generator with real-time preview and customizable themes.",
-    technologies: ["Figma", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    description:
+      "AI-powered landing page generator with real-time preview and customizable themes.",
+    technologies: [
+      "Figma",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
     category: "Frontend",
     image: "/project6.jpg",
     liveUrl: "https://landing-page-generator-taupe.vercel.app/",
     githubUrl: "https://github.com/Idraezy/Landing-Page-Generator"
   },
-  {id: 7,
-  title: "Smart Invoice",
-  description: "A web application for creating, managing, and exporting professional invoices.",
-  technologies: ["Next.js", "React", "Tailwind CSS", "JavaScript"],
-  category: "Frontend",
-  image: "/project7.jpg",
-  liveUrl: "https://smart-invoice-eta.vercel.app/",
-  githubUrl: "https://github.com/Idraezy/SmartInvoice"
-
-  },
-  {
-  id: 8,
-  title: "ClientPilot",
-  description: "A lightweight client management dashboard for freelancers and small businesses to track clients, statuses, and notes in one place.",
-  technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-  category: "Frontend",
-  image: "/project8.jpg",
-  liveUrl: "https://client-pilot-mini-app.vercel.app/",
-  githubUrl: "https://github.com/Idraezy/client-pilot"
-},
 
   {
-    id: 4,
-    title: "NFT Marketplace",
-    description: "Decentralized marketplace for trading NFTs with smart contract integration and wallet connectivity.",
-    technologies: ["Figma", "React","Typescript","Tailwind CSS", "Solidity", "Framer-motion"],
-    category: "Blockchain",
-    image: "/project2.jpg",
-    liveUrl: "https://nft-marketplace-22.vercel.app/",
-    githubUrl: "https://github.com/Idraezy/NFT-MARKETPLACE-22"
+    id: 9,
+    title: "Smart Invoice",
+    description:
+      "A web application for creating, managing, and exporting professional invoices.",
+    technologies: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "JavaScript"
+    ],
+    category: "Frontend",
+    image: "/project7.jpg",
+    liveUrl: "https://smart-invoice-eta.vercel.app/",
+    githubUrl: "https://github.com/Idraezy/SmartInvoice"
   },
+
   {
-    id: 5,
-    title: "Brand Identity Design",
-    description: "Complete brand identity package including logo, color palette, and marketing materials.",
-    technologies: ["Figma", "HTML", "Vanilla CSS", "Vanilla JavaScript"],
-    category: "Design",
-    image: "/project3.jpg",
-    liveUrl: "#"
+    id: 10,
+    title: "ClientPilot",
+    description:
+      "A lightweight client management dashboard for freelancers and small businesses to track clients, statuses, and notes in one place.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
+    category: "Frontend",
+    image: "/project8.jpg",
+    liveUrl: "https://client-pilot-mini-app.vercel.app/",
+    githubUrl: "https://github.com/Idraezy/client-pilot"
   },
+
   {
-    id: 6,
+    id: 11,
     title: "Task Management App",
-    description: "Collaborative task management application with real-time updates and team features.",
-    technologies: ["Figma", "HTML", "Vanilla CSS", "Vanilla JavaScript"],
+    description:
+      "Collaborative task management application with real-time updates and team features.",
+    technologies: [
+      "Figma",
+      "HTML",
+      "Vanilla CSS",
+      "Vanilla JavaScript"
+    ],
     category: "Design",
     image: "/project4.jpg",
     liveUrl: "https://idraezy.github.io/profile-card/",
     githubUrl: "https://idraezy.github.io/profile-card/"
   },
-  
-    
+
+  {
+    id: 12,
+    title: "Brand Identity Design",
+    description:
+      "Complete brand identity package including logo, color palette, and marketing materials.",
+    technologies: [
+      "Figma",
+      "HTML",
+      "Vanilla CSS",
+      "Vanilla JavaScript"
+    ],
+    category: "Design",
+    image: "/project3.jpg",
+    liveUrl: "#"
+  },
+
   
 ];
 
