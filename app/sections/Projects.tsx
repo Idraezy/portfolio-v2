@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { ExternalLink, Github, Filter, Search, Code2, ArrowUp, Layers } from 'lucide-react';
 
@@ -37,7 +38,7 @@ const projects = [
       "Lucide React"
     ],
     category: "Frontend",
-    image: "/gym-platform.jpg",
+    image: "/project9.jpg",
     liveUrl: "#",
     githubUrl: "https://github.com/Idraezy/city-de-fitnessCity"
   },
@@ -93,7 +94,7 @@ const projects = [
       "React Router"
     ],
     category: "Frontend",
-    image: "/applynow.jpg",
+    image: "/project11.jpeg",
     liveUrl: "https://applynow-admissions-portal.vercel.app/",
     githubUrl: "https://github.com/Idraezy/applynow-admissions-portal"
   },
@@ -112,7 +113,7 @@ const projects = [
       "Lucide React"
     ],
     category: "Frontend",
-    image: "/whatsapp-bot.jpg",
+    image: "/project12.jpg",
     liveUrl: "https://whatsapp-bot-seven-nu.vercel.app/",
     githubUrl: "https://github.com/Idraezy/Whatsapp-bot"
   },
@@ -133,7 +134,7 @@ const projects = [
       "Supabase"
     ],
     category: "Blockchain",
-    image: "/nextvest.jpg",
+    image: "/project10.jpg",
     liveUrl: "https://nex-vest-alpha.vercel.app/",
     githubUrl: "https://github.com/Idraezy/NexVest"
   },
@@ -243,6 +244,8 @@ const techDescriptions: Record<string, string> = {
 };
 
 export default function Projects() {
+  const router = useRouter();
+
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -373,9 +376,12 @@ export default function Projects() {
           key={`${selectedCategory}-${searchQuery}`}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
+
+
           {filteredProjects.map((project) => (
-            <motion.div 
+          <motion.div 
               key={project.id} 
+              onClick={() => router.push(`/projects/${project.id}`)}
               variants={itemVariants}
               whileHover={{ 
                 scale: 1.05,
@@ -384,7 +390,7 @@ export default function Projects() {
                 transition: { duration: 0.3 }
               }}
               whileTap={{ scale: 0.98 }}
-              className="group relative bg-[#012b40] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="group relative bg-[#012b40] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
               style={{ transformStyle: 'preserve-3d' }}
             >
               {/* Animated Border Glow */}
@@ -478,6 +484,7 @@ export default function Projects() {
                       href={project.liveUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(251, 146, 60, 0.5)' }}
                       whileTap={{ scale: 0.95 }}
                       className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-400 text-white rounded-full font-semibold hover:bg-orange-500 transition-colors duration-300 text-xs sm:text-sm"
@@ -491,6 +498,7 @@ export default function Projects() {
                       href={project.githubUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
+                       onClick={(e) => e.stopPropagation()}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 border-2 border-orange-400 text-orange-400 rounded-full font-semibold hover:bg-orange-400 hover:text-white  hover:border-orange-400 transition-all duration-300 text-xs sm:text-sm"
@@ -511,8 +519,10 @@ export default function Projects() {
                 {project.category}
               </motion.div>
             </motion.div>
+            
           ))}
         </motion.div>
+        
 
         {/* Empty State */}
         {filteredProjects.length === 0 && (
