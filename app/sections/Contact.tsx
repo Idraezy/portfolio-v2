@@ -1,7 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Twitter, Clock, MapPin, Send } from "lucide-react";
+import { Whatsapp } from "iconsax-react";
+import { Mail,
+   Github,
+    // Linkedin,
+    Twitter,
+     Clock,
+     MapPin, Send } from "lucide-react";
+import { FaTelegramPlane } from "react-icons/fa";
 
 function Contact() {
   const text1 = "Prepared to turn your ideas into reality?";
@@ -18,19 +25,25 @@ function Contact() {
       name: "GitHub",
       icon: Github,
       url: "https://github.com/Idraezy",
-      color: "hover:text-gray-400"
-    },
-    {
-      name: "LinkedIn",
-      icon: Linkedin,
-      url: "https://www.Linkedin.com/in/etimidaraubong",
       color: "hover:text-blue-400"
     },
+    // {
+    //   name: "LinkedIn",
+    //   icon: Linkedin,
+    //   url: "https://www.Linkedin.com/in/etimidaraubong",
+    //   color: "hover:text-blue-400"
+    // },
+    {
+         name: "Telegram",
+         icon: FaTelegramPlane,
+         url: "https://t.me/Idraezy",
+         color: "hover:text-blue-400"
+  },
     {
       name: "Twitter",
       icon: Twitter,
       url: "https://twitter.com/Idara_etimm",
-      color: "hover:text-sky-400"
+      color: "hover:text-sky-400 "
     }
   ];
 

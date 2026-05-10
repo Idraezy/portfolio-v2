@@ -8,14 +8,16 @@ import {
   Github,
 } from "lucide-react";
 import { Whatsapp, Instagram } from "iconsax-react";
-
+import { FaTelegramPlane } from "react-icons/fa";
 const socialLinks = [
   { icon: Facebook, href: "https://facebook.com/idaraetimm" },
   { icon: Whatsapp, href: "https://wa.me/2347045256955" },
   { icon: Twitter, href: "https://twitter.com/Idara_etimm" },
+  { icon: FaTelegramPlane, href: "https://t.me/Idraezy" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/etimidaraubong" },
   { icon: Instagram, href: "https://instagram.com/idaraetimm" },
   { icon: Github, href: "https://github.com/Idraezy" },
+  
 ];
 
 export default function Footer() {

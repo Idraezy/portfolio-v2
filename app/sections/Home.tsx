@@ -6,11 +6,12 @@ import {
   FileUser,
   Facebook,
   Twitter,
-  Linkedin,
-  // Instagram,
+  // Linkedin,
   Github,
 } from "lucide-react";
 import { Whatsapp, Instagram, } from "iconsax-react";
+import { FaTelegramPlane } from "react-icons/fa";
+
 import { motion } from "framer-motion";
 
 const professions = [
@@ -25,23 +26,6 @@ export default function Home() {
   const [text, setText] = useState("");
   const [letterIndex, setLetterIndex] = useState(0);
   const [cursorVisible, setCursorVisible] = useState(true);
-
-  // useEffect(() => {
-  //   if (letterIndex < professions[current].length) {
-  //     const interval = setInterval(() => {
-  //       setText((prev) => prev + professions[current][letterIndex]);
-  //       setLetterIndex((prev) => prev + 1);
-  //     }, 100);
-  //     return () => clearInterval(interval);
-  //   } else {
-  //     const timeout = setTimeout(() => {
-  //       setText("");
-  //       setLetterIndex(0);
-  //       setCurrent((prev) => (prev + 1) % professions.length);
-  //     }, 3000);
-  //     return () => clearTimeout(timeout);
-  //   }
-  // }, [letterIndex, current]);
 
 
 
@@ -84,9 +68,11 @@ export default function Home() {
     { icon: Facebook, href: "https://facebook.com/idaraetimm"  },
     { icon: Whatsapp, href: "https://wa.me/2347045256955" },
     { icon: Twitter, href: "https://twitter.com/Idara_etimm" },
-    { icon: Linkedin, href: "https://www.Linkedin.com/in/etimidaraubong" },
+    { icon: FaTelegramPlane, href: "https://t.me/Idraezy" },
+    // { icon: Linkedin, href: "https://www.Linkedin.com/in/etimidaraubong" },
     { icon: Instagram, href: "https://instagram.com/idaraetimm" },
     { icon: Github, href: "https://github.com/Idraezy" },
+    
   ];
 
   return (
