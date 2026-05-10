@@ -58,7 +58,7 @@ const projects = [
     image: "/project9.jpg",
     screenshots: ["/project9.jpg"],
     liveUrl: "#",
-    githubUrl: "https://github.com/Idraezy/city-de-fitnessCity",
+    githubUrl: "https://github.com/Idraezy/city-de-fitness",
     role: "Frontend Developer (Solo)",
     status: "pending",
     keyHighlights: [
@@ -79,8 +79,8 @@ const projects = [
     category: "Blockchain",
     image: "/project2.jpg",
     screenshots: ["/project2.jpg"],
-    liveUrl: "https://nft-marketplace-22.vercel.app/",
-    githubUrl: "https://my-nft-marketplace-j1gh.vercel.app/",
+    liveUrl: "https://my-nft-marketplace-j1gh.vercel.app/",
+    githubUrl: "https://github.com/Kaksie-codes/my-nft-marketplace",
     role: "Full-Stack Web3 Developer (Solo)",
     status: "pending",
     keyHighlights: [
@@ -150,7 +150,7 @@ const projects = [
     category: "Frontend",
     image: "/project12.jpg",
     screenshots: ["/project12.jpg"],
-    liveUrl: "https://whatsapp-bot-seven-nu.vercel.app/",
+    liveUrl: "https://whatsapp-bot411.vercel.app/",
     githubUrl: "https://github.com/Idraezy/Whatsapp-bot",
     role: "Frontend Developer (Solo)",
     status: "pending",

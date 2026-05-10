@@ -39,7 +39,7 @@ const projects = [
     category: "Frontend",
     image: "/project9.jpg",
     liveUrl: "#",
-    githubUrl: "https://github.com/Idraezy/city-de-fitnessCity"
+    githubUrl: "https://github.com/Idraezy/city-de-fitness"
   },
   {
     id: 3,
@@ -56,8 +56,8 @@ const projects = [
     ],
     category: "Blockchain",
     image: "/project2.jpg",
-    liveUrl: "https://nft-marketplace-22.vercel.app/",
-    githubUrl: "https://my-nft-marketplace-j1gh.vercel.app/"
+    liveUrl: "https://my-nft-marketplace-j1gh.vercel.app/",
+    githubUrl: "https://github.com/Kaksie-codes/my-nft-marketplace"
   },
   {
     id: 4,
@@ -108,7 +108,7 @@ const projects = [
     ],
     category: "Frontend",
     image: "/project12.jpg",
-    liveUrl: "https://whatsapp-bot-seven-nu.vercel.app/",
+    liveUrl: "https://whatsapp-bot411.vercel.app/",
     githubUrl: "https://github.com/Idraezy/Whatsapp-bot"
   },
   {
