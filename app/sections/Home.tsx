@@ -163,7 +163,7 @@ export default function Home() {
           </motion.a>
 
   <motion.a
-    href="/Idara_Etim_Resume_Updated.pdf"
+    href="/idara-etim-resume.pdf"
     target="_blank"
     rel="noopener noreferrer"
     whileHover="hover"
