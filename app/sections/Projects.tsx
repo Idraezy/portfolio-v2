@@ -25,7 +25,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Gym Platform",
+    title: "City De Fitness",
     description:
       "A modern fitness and gym platform focused on premium UI/UX, responsive layouts, animated interactions, and engaging user experience for fitness brands and communities.",
     technologies: [
@@ -376,7 +376,7 @@ export default function Projects() {
               style={{ transformStyle: 'preserve-3d' }}
             >
               {/* Animated Border Glow */}
-              <motion.div
+              {/* <motion.div
                 className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{
                   background: 'linear-gradient(45deg, transparent, rgba(251, 146, 60, 0.3), transparent)',
@@ -384,7 +384,7 @@ export default function Projects() {
                 }}
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-              />
+              /> */}
 
               {/* Project Image */}
               <div className="relative h-40 sm:h-48 overflow-hidden bg-gray-700">

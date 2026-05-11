@@ -94,7 +94,7 @@ export default function AboutSection() {
                   </div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: "easeOut" }} viewport={{ once: true, amount: 0.3 }} className="flex-1 text-center lg:text-left">
-                  <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-400">Unmatched Service Quality for Over 2 Years</h2>
+                  <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-400">Unmatched Service Quality for Over 3 Years</h2>
                   <p className="text-gray-400 leading-relaxed mb-6">Adept at solving complex problems, writing clean and efficient code, and continuously improving performance. A collaborative team player committed to agile development practices and ongoing professional growth. Currently expanding expertise in backend and smart contract development, with strengths in graphic design and Web3 advocacy.</p>
                   <div className="space-y-3">
                     <Info icon={<UserRound />} text="Idara Ubong Etim" />
