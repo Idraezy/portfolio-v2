@@ -34,10 +34,23 @@ export default function AboutSection() {
 
   const experiences = [
     {
+      company: "FlexiSAF",
+      role: "Frontend Developer (Internship)",
+      period: "2025 – 2026",
+      description: "Contributed to the development of user-friendly web applications using React.js, TypeScript, and Tailwind CSS, while gaining valuable experience in a collaborative team environment.",
+
+    },
+    {
       company: "Freelance",
       role: "Frontend Developer",
-      period: "2023 – Present",
+      period: "2025 – Present",
       description: "Building modern, responsive, and animated web interfaces using React.js, TypeScript, Tailwind CSS, and Framer Motion with strong focus on UX and performance.",
+    },
+    {
+      company: "HNG",
+      role: "Frontend Developer (Internship)",
+      period: "2024 – 2025",
+      description: "Participated in an intensive internship focused on building production-ready frontend applications.",
     },
     {
       company: "Chaindustry",
@@ -45,18 +58,12 @@ export default function AboutSection() {
       period: "2023 – Present",
       description: "Worked on real-world frontend projects in a collaborative development environment.",
     },
-    {
-      company: "HNG",
-      role: "Frontend Developer (Internship)",
-      period: "2025 – Present",
-      description: "Participated in an intensive internship focused on building production-ready frontend applications.",
-    },
   ];
 
   const techStack = [
     ["HTML", "CSS", "JavaScript"],
     ["TypeScript", "React.js", "Next.js"],
-    ["Tailwind CSS", "Framer Motion", ""],
+    ["Tailwind CSS", "Framer Motion", "Solidity"],
   ];
 
   const tools = [["VS Code", "Git", "Figma"]];
