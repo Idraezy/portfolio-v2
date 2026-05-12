@@ -78,7 +78,7 @@ const projects = [
     technologies: ["Figma", "React", "TypeScript", "Tailwind CSS", "Solidity", "Framer Motion"],
     category: "Blockchain",
     image: "/project2.jpg",
-    screenshots: ["/project2.jpg"],
+    screenshots: ["/project2.jpg", "/project2a.jpg", "/project2b.jpg", "/project2c.jpg", "/project2d.jpg"],
     liveUrl: "https://my-nft-marketplace-j1gh.vercel.app/",
     githubUrl: "https://github.com/Kaksie-codes/my-nft-marketplace",
     role: "Full-Stack Web3 Developer (Solo)",
@@ -126,7 +126,7 @@ const projects = [
     technologies: ["React", "Tailwind CSS", "JSON Server", "Axios", "React Router"],
     category: "Frontend",
     image: "/project11.jpeg",
-    screenshots: ["/project11.jpeg"],
+    screenshots: ["/project11a.png", "/project11b.png", "/project11c.png", "/project11d.png"],
     liveUrl: "https://applynow-admissions-portal.vercel.app/",
     githubUrl: "https://github.com/Idraezy/applynow-admissions-portal",
     role: "Frontend Developer — FlexiSAF Internship",
@@ -414,10 +414,10 @@ export default function ProjectDetailPage() {
         <div className="text-center">
           <p className="text-gray-400 text-xl mb-4">Project not found.</p>
           <button
-            onClick={() => router.back()}
+            onClick={() => router.push("/#projects")}
             className="px-6 py-3 bg-orange-400 text-white rounded-full font-semibold hover:bg-orange-500 transition-colors"
           >
-            Go Back
+            Back to Projects
           </button>
         </div>
       </div>
@@ -428,7 +428,7 @@ export default function ProjectDetailPage() {
   const screenshots = project.screenshots ?? [project.image];
 
   return (
-    <section className="min-h-screen bg-[#011C2A] text-gray-300 pt-24 pb-20">
+    <section className="min-h-screen bg-[#011C2A] text-gray-300 pt-8 pb-20">
       {/* Lightbox */}
       {lightboxIndex !== null && (
         <Lightbox
@@ -448,14 +448,15 @@ export default function ProjectDetailPage() {
         />
       )}
 
-      <div className="mx-4 sm:mx-6 md:mx-10 lg:mx-14 xl:mx-20 max-w-6xl">
+      {/* ── Full-width wrapper — matches your portfolio's side margins ── */}
+      <div className="w-full px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20">
 
         {/* Back Button */}
         <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4 }}
-          onClick={() => router.back()}
+          onClick={() => router.push("/#projects")}
           className="flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold mb-8 group"
         >
           <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
@@ -467,32 +468,30 @@ export default function ProjectDetailPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-wrap items-start gap-4 mb-6"
+          className="mb-6"
         >
-          <div className="flex-1 min-w-0">
-            <div className="flex flex-wrap items-center gap-3 mb-2">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-                {project.title}
-              </h1>
-              {isPending ? (
-                <span className="flex items-center gap-1.5 px-3 py-1 bg-yellow-500/15 border border-yellow-500/40 text-yellow-400 rounded-full text-xs font-bold uppercase tracking-wide">
-                  <Clock className="w-3.5 h-3.5" />
-                  In Progress
-                </span>
-              ) : (
-                <span className="flex items-center gap-1.5 px-3 py-1 bg-green-500/15 border border-green-500/40 text-green-400 rounded-full text-xs font-bold uppercase tracking-wide">
-                  <CheckCircle className="w-3.5 h-3.5" />
-                  Live
-                </span>
-              )}
-              <span className="px-3 py-1 bg-orange-400 text-white rounded-full text-xs font-bold uppercase tracking-wide">
-                {project.category}
+          <div className="flex flex-wrap items-center gap-3 mb-3">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+              {project.title}
+            </h1>
+            {isPending ? (
+              <span className="flex items-center gap-1.5 px-3 py-1 bg-yellow-500/15 border border-yellow-500/40 text-yellow-400 rounded-full text-xs font-bold uppercase tracking-wide">
+                <Clock className="w-3.5 h-3.5" />
+                In Progress
               </span>
-            </div>
-            <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-3xl">
-              {project.description}
-            </p>
+            ) : (
+              <span className="flex items-center gap-1.5 px-3 py-1 bg-green-500/15 border border-green-500/40 text-green-400 rounded-full text-xs font-bold uppercase tracking-wide">
+                <CheckCircle className="w-3.5 h-3.5" />
+                Live
+              </span>
+            )}
+            <span className="px-3 py-1 bg-orange-400 text-white rounded-full text-xs font-bold uppercase tracking-wide">
+              {project.category}
+            </span>
           </div>
+          <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-4xl">
+            {project.description}
+          </p>
         </motion.div>
 
         {/* Action Buttons */}
@@ -572,7 +571,7 @@ export default function ProjectDetailPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mb-10 p-5 rounded-2xl border border-yellow-500/30 bg-yellow-500/5 flex items-start gap-4"
           >
-            <div className="p-2.5 bg-yellow-500/20 rounded-xl mt-0.5">
+            <div className="p-2.5 bg-yellow-500/20 rounded-xl mt-0.5 flex-shrink-0">
               <Clock className="w-5 h-5 text-yellow-400" />
             </div>
             <div>
@@ -587,9 +586,10 @@ export default function ProjectDetailPage() {
           </motion.div>
         )}
 
+        {/* ── Main 2-col grid ── */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-          {/* Main Column */}
+          {/* Left / Main Column */}
           <div className="lg:col-span-2 space-y-10">
 
             {/* Screenshots */}
@@ -672,7 +672,7 @@ export default function ProjectDetailPage() {
             </motion.div>
           </div>
 
-          {/* Sidebar */}
+          {/* Right / Sidebar */}
           <div className="space-y-6">
 
             {/* Tech Stack */}
@@ -738,7 +738,7 @@ export default function ProjectDetailPage() {
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent"
+            className="w-full h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent"
           />
         </div>
       </div>
