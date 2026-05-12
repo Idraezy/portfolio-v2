@@ -3,12 +3,15 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { LayoutDashboard, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [currentTime, setCurrentTime] = useState("");
   const [tagline, setTagline] = useState("");
   const [activeSection, setActiveSection] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const pathname = usePathname();
 
   useEffect(() => {
     const updateTimeAndTagline = () => {
@@ -33,13 +36,14 @@ export default function Navbar() {
     return () => clearInterval(interval);
   }, []);
 
-  // Track active section on scroll with improved logic
+  // Only track active section when on the home page
   useEffect(() => {
+    if (pathname !== "/") return;
+
     const handleScroll = () => {
       const sections = ["about", "projects", "contact"];
       const scrollPosition = window.scrollY + 100;
 
-      // If at the very top, clear active section
       if (window.scrollY < 100) {
         setActiveSection("");
         return;
@@ -50,7 +54,6 @@ export default function Navbar() {
         if (element) {
           const offsetTop = element.offsetTop;
           const offsetBottom = offsetTop + element.offsetHeight;
-
           if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
             setActiveSection(section);
             break;
@@ -62,12 +65,26 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
+
+  // On "/" smooth-scroll directly; on other pages let href="/#id" navigate normally
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
+    setMobileMenuOpen(false);
+
+    if (pathname === "/") {
+      e.preventDefault();
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const navItems = [
-    { name: "About", id: "about" },
+    { name: "About",    id: "about" },
     { name: "Projects", id: "projects" },
-    { name: "Contact", id: "contact" }
+    { name: "Contact",  id: "contact" },
   ];
 
   return (
@@ -78,7 +95,7 @@ export default function Navbar() {
       className="bg-[#011C2A] py-4 sticky top-0 z-50 shadow-lg border-b border-gray-800"
     >
       <div className="max-w-full mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
-        
+
         {/* Left: Profile Image + Text */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -92,7 +109,7 @@ export default function Navbar() {
               alt="Profile"
               className="w-full h-full rounded-full object-cover"
             />
-            
+
             {/* Animated Green Dot */}
             <div className="absolute top-0 right-0 w-3 h-3">
               <motion.div
@@ -108,7 +125,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="leading-tight ">
+          <div className="leading-tight">
             <h1 className="text-sm sm:text-sm font-bold flex justify-center text-orange-400">
               Idraezy
             </h1>
@@ -121,7 +138,8 @@ export default function Navbar() {
           {navItems.map((item) => (
             <a
               key={item.id}
-              href={`#${item.id}`}
+              href={`/#${item.id}`}
+              onClick={(e) => handleNavClick(e, item.id)}
               className="relative px-4 py-2 text-sm lg:text-base font-semibold transition-colors"
             >
               <span
@@ -163,7 +181,7 @@ export default function Navbar() {
         initial={{ opacity: 0, height: 0 }}
         animate={{
           opacity: mobileMenuOpen ? 1 : 0,
-          height: mobileMenuOpen ? "auto" : 0
+          height: mobileMenuOpen ? "auto" : 0,
         }}
         transition={{ duration: 0.3 }}
         className="md:hidden overflow-hidden bg-[#011C2A] border-t border-gray-800"
@@ -172,8 +190,8 @@ export default function Navbar() {
           {navItems.map((item) => (
             <a
               key={item.id}
-              href={`#${item.id}`}
-              onClick={() => setMobileMenuOpen(false)}
+              href={`/#${item.id}`}
+              onClick={(e) => handleNavClick(e, item.id)}
               className={`block px-4 py-3 rounded-lg font-semibold transition-all ${
                 activeSection === item.id
                   ? "bg-orange-400/10 text-orange-400 border border-orange-400/30"
@@ -183,7 +201,7 @@ export default function Navbar() {
               {item.name}
             </a>
           ))}
-          
+
           {/* Time in mobile menu */}
           <div className="sm:hidden px-4 py-3 text-sm font-extrabold text-gray-300 border-t border-gray-800 mt-2 pt-4">
             <span className="text-orange-400">{currentTime}</span> GMT+1
