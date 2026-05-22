@@ -27,7 +27,7 @@ const projects = [
     id: 2,
     title: "City De Fitness",
     description:
-      "A modern fitness and gym platform focused on premium UI/UX, responsive layouts, animated interactions, and engaging user experience for fitness brands and communities.",
+  "A modern fitness and gym platform focused on premium UI/UX, responsive layouts, animated interactions, and immersive user experience for fitness brands and communities. Features include live virtual training sessions, real-time video coaching, JWT-authenticated JaaS video conferencing, and fully responsive fitness engagement tools built with modern web technologies.",
     technologies: ["Figma","React","TypeScript","Tailwind CSS","Framer Motion", "Lucide React","JaaS (Jitsi as a Service)","Jitsi Meet External API","JWT Authentication","WebRTC",],
     category: "Frontend",
     image: "/project9.jpg",
