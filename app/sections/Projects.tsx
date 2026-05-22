@@ -28,17 +28,10 @@ const projects = [
     title: "City De Fitness",
     description:
       "A modern fitness and gym platform focused on premium UI/UX, responsive layouts, animated interactions, and engaging user experience for fitness brands and communities.",
-    technologies: [
-      "Figma",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Lucide React"
-    ],
+    technologies: ["Figma","React","TypeScript","Tailwind CSS","Framer Motion", "Lucide React","JaaS (Jitsi as a Service)","Jitsi Meet External API","JWT Authentication","WebRTC",],
     category: "Frontend",
     image: "/project9.jpg",
-    liveUrl: "#",
+    liveUrl: "https://citydefitness-ten.vercel.app/",
     githubUrl: "https://github.com/Idraezy/city-de-fitness"
   },
   {

@@ -53,14 +53,14 @@ const projects = [
       "A modern fitness and gym platform focused on premium UI/UX, responsive layouts, animated interactions, and engaging user experience.",
     overview:
       "City De Fitness is a modern fitness brand platform designed to deliver an immersive, high-energy experience. The project focuses heavily on premium UI/UX design with bold typography, dark themes, and fluid animations to represent the energy of a gym community. This project is currently under active development.",
-    technologies: ["Figma", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Lucide React"],
+    technologies: ["Figma","React","TypeScript","Tailwind CSS","Framer Motion", "Lucide React","JaaS (Jitsi as a Service)","Jitsi Meet External API","JWT Authentication","WebRTC",],
     category: "Frontend",
     image: "/project9.jpg",
     screenshots: ["/project9.jpg",], 
-    liveUrl: "#",
+    liveUrl: "https://citydefitness-ten.vercel.app/",
     githubUrl: "https://github.com/Idraezy/city-de-fitness",
     role: "Frontend Developer (Solo)",
-    status: "pending",
+    status: "live",
     keyHighlights: [
       "Designed immersive hero section with parallax scrolling effects",
       "Built class schedule and trainer profile components",
