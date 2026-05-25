@@ -30,7 +30,7 @@ const projects = [
   "A modern fitness and gym platform focused on premium UI/UX, responsive layouts, animated interactions, and immersive user experience for fitness brands and communities. Features include live virtual training sessions, real-time video coaching, JWT-authenticated JaaS video conferencing, and fully responsive fitness engagement tools built with modern web technologies.",
     technologies: ["Figma","React","TypeScript","Tailwind CSS","Framer Motion", "Lucide React","JaaS (Jitsi as a Service)","Jitsi Meet External API","JWT Authentication","WebRTC",],
     category: "Frontend",
-    image: "/project9.jpg",
+    image: "/project9.png",
     liveUrl: "https://citydefitness-ten.vercel.app/",
     githubUrl: "https://github.com/Idraezy/city-de-fitness"
   },

@@ -56,7 +56,7 @@ const projects = [
     technologies: ["Figma","React","TypeScript","Tailwind CSS","Framer Motion", "Lucide React","JaaS (Jitsi as a Service)","Jitsi Meet External API","JWT Authentication","WebRTC",],
     category: "Frontend",
     image: "/project9.jpg",
-    screenshots: ["/project9.jpg",], 
+    screenshots: ["/project9.png","/project9a.png","/project9b.png","/project9c.png","/project9d.png","/project9e.png","/project9f.png", "/project9g.png", "/project9h.png"], 
     liveUrl: "https://citydefitness-ten.vercel.app/",
     githubUrl: "https://github.com/Idraezy/city-de-fitness",
     role: "Frontend Developer (Solo)",
