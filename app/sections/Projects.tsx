@@ -34,6 +34,63 @@ const projects = [
     liveUrl: "https://citydefitness-ten.vercel.app/",
     githubUrl: "https://github.com/Idraezy/city-de-fitness"
   },
+
+   {
+  id: 13,
+  title: "PetPi",
+  description:
+    "Modern pet marketplace for buying pets, pet accessories, food, toys, and care products with a complete admin management system.",
+
+  overview:
+    "PetPi is a full-stack pet marketplace platform built to connect pet lovers with trusted breeders and pet product vendors. The platform allows users to browse available pets, view detailed pet profiles, explore pet supplies, manage wishlists, and contact sellers. An advanced admin dashboard provides complete control over pets, products, categories, site settings, featured listings, customer messages, and analytics. The application uses Supabase for authentication, database management, storage, and backend services while React, TypeScript, and Tailwind CSS power the frontend experience.",
+
+  technologies: [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "Supabase",
+    "PostgreSQL",
+    "React Router",
+    "Framer Motion",
+    "Lucide React",
+    "React Hot Toast"
+  ],
+
+  category: "E-Commerce",
+
+  image: "/project13.jpg",
+
+  screenshots: [
+    "/project13a.jpg",
+    "/project13b.jpg",
+    "/project13.jpg",
+    "/project13c.jpg",
+  ],
+
+  liveUrl: "https://petpi.vercel.app/",
+
+  role: "Full-Stack Developer (Solo)",
+
+  status: "completed",
+
+  keyHighlights: [
+    "Built a complete pet marketplace for pets, pet supplies, food, toys, and care products",
+    "Integrated Supabase Authentication with user registration and login system",
+    "Created a protected admin dashboard with role-based access control",
+    "Implemented pet management including create, edit, delete, and featured listings",
+    "Developed product management system with categories and inventory support",
+    "Built dynamic homepage sections powered by live Supabase data",
+    "Implemented wishlist functionality for authenticated users",
+    "Added responsive design optimized for desktop, tablet, and mobile devices",
+    "Integrated Framer Motion animations for modern user experience",
+    "Created site settings management for homepage content, contact information, and system configuration",
+    "Connected Supabase Database and Storage for scalable backend operations",
+    "Implemented category management for both pets and products"
+  ],
+},
+
+
   {
     id: 3,
     title: "NFT Marketplace",
