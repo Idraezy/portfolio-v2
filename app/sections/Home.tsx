@@ -15,9 +15,9 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const professions = [
-  "Frontend Developer",
-  "Blockchain Developer (Training)",
-  "Graphic Designer",
+  "Full Stack Developer",
+  "React & Next.js Developer",
+  "Blockchain Developer",
   "Technical Writer",
 ];
 
@@ -134,14 +134,17 @@ export default function Home() {
             animate={{ opacity: 1 }}
           >
             <p className="mb-4">
-              I'm a Frontend Developer skilled in HTML, CSS, JavaScript, React.js,
-              TypeScript, Tailwind CSS, and Next.js, with a strong passion for
-              building intuitive, user-focused solutions.
+               I'm a Full Stack Developer specializing in modern web applications
+               using React.js, Next.js, TypeScript, Tailwind CSS, Node.js,
+               Express.js, PostgreSQL, and Supabase. I enjoy building scalable,
+               user-focused products from frontend interfaces to backend systems.
             </p>
-            <p>
-              Currently expanding expertise in backend development and smart
-              contract development, with additional strengths in graphic design
-              and active involvement as a Web3 Ambassador.
+
+<p>
+  Beyond full stack development, I have experience with blockchain
+               technologies, smart contract development, technical writing, and
+               graphic design. I'm passionate about creating high-performance
+               digital solutions that deliver real-world value.
             </p>
           </motion.div>
 
