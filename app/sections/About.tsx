@@ -64,46 +64,55 @@ export default function AboutSection() {
   {
     title: "Frontend Development",
     skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
-      "React.js",
-      "Next.js",
-      "Tailwind CSS",
-      "Framer Motion",
+      { name: "HTML", color: "text-orange-500" },
+      { name: "CSS", color: "text-blue-500" },
+      { name: "JavaScript", color: "text-yellow-400" },
+      { name: "TypeScript", color: "text-blue-600" },
+      { name: "React.js", color: "text-cyan-400" },
+      { name: "Next.js", color: "text-white" },
+      { name: "Tailwind CSS", color: "text-sky-400" },
+      { name: "Framer Motion", color: "text-pink-500" },
     ],
   },
+
   {
     title: "Backend Development",
     skills: [
-      "Node.js",
-      "Express.js",
-      "REST APIs",
-      "Authentication",
+      { name: "Node.js", color: "text-green-500" },
+      { name: "Express.js", color: "text-gray-300" },
+      { name: "REST APIs", color: "text-purple-400" },
+      { name: "Authentication", color: "text-red-400" },
     ],
   },
+
   {
     title: "Database",
     skills: [
-      "PostgreSQL",
-      "Supabase",
+      { name: "PostgreSQL", color: "text-blue-400" },
+      { name: "Supabase", color: "text-green-400" },
     ],
   },
+
   {
     title: "Blockchain",
     skills: [
-      "Solidity",
-      "Web3.js",
-      "Ethers.js",
+      { name: "Solidity", color: "text-gray-400" },
+      { name: "Web3.js", color: "text-orange-400" },
+      { name: "Ethers.js", color: "text-indigo-400" },
     ],
   },
 ];
 
   const tools = [
-  ["VS Code", "Git", "GitHub"],
-  ["Postman", "Figma", "Vercel"],
-  ["Supabase", "Docker", "npm"]
+  { name: "VS Code", color: "text-blue-500" },
+  { name: "Git", color: "text-orange-500" },
+  { name: "GitHub", color: "text-white" },
+  { name: "Postman", color: "text-orange-400" },
+  { name: "Figma", color: "text-pink-500" },
+  { name: "Vercel", color: "text-white" },
+  { name: "Supabase", color: "text-green-400" },
+  { name: "Docker", color: "text-blue-400" },
+  { name: "npm", color: "text-red-500" },
 ];
 
   return (
@@ -196,10 +205,11 @@ export default function AboutSection() {
           className="flex items-center gap-2 text-sm"
         >
           <ShieldCheck
-            size={18}
-            className="text-orange-400"
+           size={18}
+          className={skill.color}
           />
-          {skill}
+
+         <span>{skill.name}</span>
         </motion.div>
       ))}
     </div>
@@ -209,15 +219,27 @@ export default function AboutSection() {
               <div>
                 <h3 className="text-orange-400 font-semibold mb-3">Tools</h3>
                 <hr className="border-gray-600 mb-4" />
-                {tools.map((row, i) => (
-                  <div key={i} className="grid grid-cols-3 gap-4">
-                    {row.map((tool, idx) => tool && (
-                      <motion.div key={idx} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.7 + idx * 0.1 }} className="flex items-center gap-2 text-sm">
-                        <ShieldCheck size={18} className="text-orange-400" />{tool}
-                      </motion.div>
-                    ))}
-                  </div>
-                ))}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+  {tools.map((tool, idx) => (
+    <motion.div
+      key={idx}
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.5,
+        delay: idx * 0.05,
+      }}
+      className="flex items-center gap-2 text-sm"
+    >
+      <ShieldCheck
+        size={18}
+        className={tool.color}
+      />
+
+      <span>{tool.name}</span>
+    </motion.div>
+  ))}
+</div>
               </div>
             </motion.div>
           )}
