@@ -94,14 +94,17 @@ export default function AboutSection() {
                   </div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: "easeOut" }} viewport={{ once: true, amount: 0.3 }} className="flex-1 text-center lg:text-left">
-                  <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-400">Unmatched Service Quality for Over 3 Years</h2>
-                  <p className="text-gray-400 leading-relaxed mb-6">Adept at solving complex problems, writing clean and efficient code, and continuously improving performance. A collaborative team player committed to agile development practices and ongoing professional growth. Currently expanding expertise in backend and smart contract development, with strengths in graphic design and Web3 advocacy.</p>
+                  <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-400"><h2> Passionate About Creating Scalable Web Applications</h2></h2>
+                  <p className="text-gray-400 leading-relaxed mb-6">I am a Full Stack Developer with experience building modern web applications from frontend interfaces to backend systems. <br />
+                     My expertise includes React.js, Next.js, TypeScript, Node.js, Express.js, Supabase, PostgreSQL, and RESTful APIs.
+                     I enjoy solving complex problems, writing clean and maintainable code, and developing scalable applications that provide exceptional user experiences. 
+                     Beyond full stack development, I also have experience with blockchain technologies, smart contracts, technical writing, and graphic design.</p>
                   <div className="space-y-3">
                     <Info icon={<UserRound />} text="Idara Ubong Etim" />
                     <Info icon={<Mail />} text="idraezynoks@gmail.com" />
                     <Info icon={<MapPin />} text="Nigeria" />
                     <Info icon={<PhoneCall />} text="+234 (0)704 525 6955" />
-                    <Info icon={<GraduationCap />} text="SSCE, WASSCE, NECO" />
+                    <Info icon={<GraduationCap />} text="SSCE, WASSCE, NECO, FlexiSAF" />
                   </div>
                   <div className="mt-6">
                     <h3 className="text-orange-400 font-semibold mb-2">Language Skills</h3>
