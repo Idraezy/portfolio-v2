@@ -57,7 +57,7 @@ const projects = [
     "React Hot Toast"
   ],
 
-  category: "E-Commerce",
+  category: "Fullstack",
 
   image: "/project13.jpg",
 
@@ -163,7 +163,7 @@ const projects = [
   },
   {
     id: 7,
-    title: "NextVest - Investment Platform",
+    title: "NextVest",
     description:
       "A modern investment platform built with React and Solidity, featuring real-time market data, investment tracking, and scalable blockchain-powered architecture for digital investing.",
     technologies: [
@@ -176,7 +176,7 @@ const projects = [
       "Solidity",
       "Supabase"
     ],
-    category: "Blockchain",
+    category: "Fullstack",
     image: "/project10.jpg",
     liveUrl: "https://nex-vest-alpha.vercel.app/",
     githubUrl: "https://github.com/Idraezy/NexVest"
@@ -263,7 +263,7 @@ const projects = [
   },
 ];
 
-const categories = ["All", "Frontend", "Blockchain", "Design"];
+const categories = ["All", "Fullstack", "Frontend","Blockchain","Design"];
 
 const techDescriptions: Record<string, string> = {
   "Figma": "UI/UX Design Tool",
