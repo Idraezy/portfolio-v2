@@ -54,7 +54,7 @@ export default function AboutSection() {
     },
     {
       company: "Chaindustry",
-      role: "Frontend Developer (Internship)",
+      role: "Full Stack Developer Intern",
       period: "2023 – Present",
       description: "Worked on real-world frontend projects in a collaborative development environment.",
     },

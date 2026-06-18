@@ -140,8 +140,8 @@ export default function Home() {
                user-focused products from frontend interfaces to backend systems.
             </p>
 
-<p>
-  Beyond full stack development, I have experience with blockchain
+            <p>
+               Beyond full stack development, I have experience with blockchain
                technologies, smart contract development, technical writing, and
                graphic design. I'm passionate about creating high-performance
                digital solutions that deliver real-world value.
