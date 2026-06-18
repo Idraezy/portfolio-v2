@@ -60,13 +60,51 @@ export default function AboutSection() {
     },
   ];
 
-  const techStack = [
-    ["HTML", "CSS", "JavaScript"],
-    ["TypeScript", "React.js", "Next.js"],
-    ["Tailwind CSS", "Framer Motion", "Solidity"],
-  ];
+  const skillCategories = [
+  {
+    title: "Frontend Development",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+  },
+  {
+    title: "Backend Development",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "Authentication",
+    ],
+  },
+  {
+    title: "Database",
+    skills: [
+      "PostgreSQL",
+      "Supabase",
+    ],
+  },
+  {
+    title: "Blockchain",
+    skills: [
+      "Solidity",
+      "Web3.js",
+      "Ethers.js",
+    ],
+  },
+];
 
-  const tools = [["VS Code", "Git", "Figma"]];
+  const tools = [
+  ["VS Code", "Git", "GitHub"],
+  ["Postman", "Figma", "Vercel"],
+  ["Supabase", "Docker", "npm"]
+];
 
   return (
     <>
@@ -97,7 +135,7 @@ export default function AboutSection() {
                   <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-400"><h2> Passionate About Creating Scalable Web Applications</h2></h2>
                   <p className="text-gray-400 leading-relaxed mb-6">I am a Full Stack Developer with experience building modern web applications from frontend interfaces to backend systems. <br />
                      My expertise includes React.js, Next.js, TypeScript, Node.js, Express.js, Supabase, PostgreSQL, and RESTful APIs.
-                     I enjoy solving complex problems, writing clean and maintainable code, and developing scalable applications that provide exceptional user experiences. 
+                     I enjoy solving complex problems, writing clean and maintainable code, and developing scalable applications that provide exceptional user experiences. <br />
                      Beyond full stack development, I also have experience with blockchain technologies, smart contracts, technical writing, and graphic design.</p>
                   <div className="space-y-3">
                     <Info icon={<UserRound />} text="Idara Ubong Etim" />
@@ -105,11 +143,6 @@ export default function AboutSection() {
                     <Info icon={<MapPin />} text="Nigeria" />
                     <Info icon={<PhoneCall />} text="+234 (0)704 525 6955" />
                     <Info icon={<GraduationCap />} text="SSCE, WASSCE, NECO, FlexiSAF" />
-                  </div>
-                  <div className="mt-6">
-                    <h3 className="text-orange-400 font-semibold mb-2">Language Skills</h3>
-                    <hr className="border-gray-600 mb-2" />
-                    <p className="text-gray-400">English, Ibibio, French, Latin (Beginner)</p>
                   </div>
                 </motion.div>
               </div>
@@ -147,15 +180,31 @@ export default function AboutSection() {
               <div className="mb-10">
                 <h3 className="text-orange-400 font-semibold mb-3">Tech Stack</h3>
                 <hr className="border-gray-600 mb-4" />
-                {techStack.map((row, i) => (
-                  <div key={i} className="grid grid-cols-3 gap-4 mb-3">
-                    {row.map((skill, idx) => skill && (
-                      <motion.div key={idx} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: idx * 0.1 }} className="flex items-center gap-2 text-sm">
-                        <ShieldCheck size={18} className="text-orange-400" />{skill}
-                      </motion.div>
-                    ))}
-                  </div>
-                ))}
+                {skillCategories.map((category, i) => (
+  <div key={i} className="mb-8">
+    <h4 className="text-orange-400 font-semibold mb-3">
+      {category.title}
+    </h4>
+
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      {category.skills.map((skill, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: idx * 0.05 }}
+          className="flex items-center gap-2 text-sm"
+        >
+          <ShieldCheck
+            size={18}
+            className="text-orange-400"
+          />
+          {skill}
+        </motion.div>
+      ))}
+    </div>
+  </div>
+))}
               </div>
               <div>
                 <h3 className="text-orange-400 font-semibold mb-3">Tools</h3>
