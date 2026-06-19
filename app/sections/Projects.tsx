@@ -27,7 +27,7 @@ const projects = [
     id: 2,
     title: "City De Fitness",
     description:
-  "A modern fitness and gym platform focused on premium UI/UX, responsive layouts, animated interactions, and immersive user experience for fitness brands and communities. Features include live virtual training sessions, real-time video coaching, JWT-authenticated JaaS video conferencing, and fully responsive fitness engagement tools built with modern web technologies.",
+       "A modern fitness and gym platform focused on premium UI/UX, responsive layouts, animated interactions, and immersive user experience for fitness brands and communities. Features include live virtual training sessions, real-time video coaching, JWT-authenticated JaaS video conferencing, and fully responsive fitness engagement tools built with modern web technologies.",
     technologies: ["Figma","React","TypeScript","Tailwind CSS","Framer Motion", "Lucide React","JaaS (Jitsi as a Service)","Jitsi Meet External API","JWT Authentication","WebRTC",],
     category: "Frontend",
     image: "/project9.png",
@@ -341,7 +341,7 @@ export default function Projects() {
             <Code2 className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-orange-400" />
           </div>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 font-semibold text-center">
-            A collection of my recent work in Frontend development, Blockchain, and Design.
+            A collection of my recent work in Fullstack development, Frontend development, Blockchain development, and Design.
           </p>
         </motion.div>
 
@@ -425,16 +425,6 @@ export default function Projects() {
               className="group relative bg-[#012b40] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
               style={{ transformStyle: 'preserve-3d' }}
             >
-              {/* Animated Border Glow */}
-              {/* <motion.div
-                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{
-                  background: 'linear-gradient(45deg, transparent, rgba(251, 146, 60, 0.3), transparent)',
-                  filter: 'blur(10px)',
-                }}
-                animate={{ rotate: [0, 360] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-              /> */}
 
               {/* Project Image */}
               <div className="relative h-40 sm:h-48 overflow-hidden bg-gray-700">

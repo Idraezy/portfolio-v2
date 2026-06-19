@@ -55,7 +55,7 @@ const projects = [
   "City De Fitness is a modern fitness brand platform designed to deliver an immersive, high-energy digital fitness experience. The project focuses heavily on premium UI/UX design with bold typography, dark themes, fluid animations, and responsive layouts that reflect the intensity and energy of a real gym environment. The platform also integrates live virtual workout sessions and real-time video coaching powered by JaaS (Jitsi as a Service) and WebRTC technology, allowing trainers and clients to connect directly through secure browser-based video sessions. This project is currently under active development.",
     technologies: ["Figma","React","TypeScript","Tailwind CSS","Framer Motion", "Lucide React","JaaS (Jitsi as a Service)","Jitsi Meet External API","JWT Authentication","WebRTC",],
     category: "Frontend",
-    image: "/project9.jpg",
+    image: "/project9.png",
     screenshots: ["/project9.png","/project9a.png","/project9b.png","/project9c.png","/project9d.png","/project9e.png","/project9f.png", "/project9g.png", "/project9h.png"], 
     liveUrl: "https://citydefitness-ten.vercel.app/",
     githubUrl: "https://github.com/Idraezy/city-de-fitness",
