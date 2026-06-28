@@ -187,7 +187,7 @@ export default function AboutSection() {
             <motion.div key="skills" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="max-w-6xl mx-auto">
               <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-400">My Arsenal</h2>
               <div className="mb-10">
-                <h3 className="text-orange-400 font-semibold mb-3">Tech Stack</h3>
+                <h3 className="text-orange-400 font-semibold mb-3">Tech</h3>
                 <hr className="border-gray-600 mb-4" />
                 {skillCategories.map((category, i) => (
   <div key={i} className="mb-8">
