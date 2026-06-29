@@ -90,6 +90,67 @@ const projects = [
   ],
 },
 
+{
+  id: 14,
+
+  title: "Homemedy",
+
+  description:
+    "Modern full-stack real estate marketplace for buying, selling, and discovering residential and commercial properties with a powerful admin management system.",
+
+  overview:
+    "Homemedy is a full-stack real estate marketplace designed to simplify property discovery and management. The platform enables users to browse houses, apartments, land, and commercial properties, view detailed property information, save favorite listings to their wishlist, and securely contact property owners or agents. A comprehensive admin dashboard provides complete control over property listings, categories, users, inquiries, featured properties, analytics, and website content. The application leverages Supabase for authentication, database, and backend services while React, TypeScript, and Tailwind CSS deliver a fast, responsive, and modern user experience.",
+
+  technologies: [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "Supabase",
+    "PostgreSQL",
+    "React Router",
+    "Framer Motion",
+    "Lucide React",
+    "React Hook Form",
+    "Zod",
+    "React Hot Toast"
+  ],
+
+  category: "Fullstack",
+
+  image: "/project14.jpg",
+
+  screenshots: [
+    "/project14a.jpg",
+    "/project14b.jpg",
+    "/project14.jpg",
+    "/project14c.jpg",
+  ],
+
+  liveUrl: "https://homemedy.vercel.app/",
+
+  role: "Full-Stack Developer (Solo)",
+
+  status: "completed",
+
+  keyHighlights: [
+    "Built a complete real estate marketplace for residential and commercial property listings",
+    "Integrated secure user authentication with Supabase Auth",
+    "Developed a protected admin dashboard with role-based access control",
+    "Implemented property management including create, edit, delete, and featured listings",
+    "Created advanced property search with filtering by location, category, and price",
+    "Built detailed property pages with image galleries and property specifications",
+    "Implemented wishlist functionality for authenticated users",
+    "Added inquiry/contact system connecting buyers with property agents",
+    "Developed category management for houses, apartments, land, and commercial properties",
+    "Integrated responsive design optimized for desktop, tablet, and mobile devices",
+    "Enhanced user experience with Framer Motion animations and smooth page transitions",
+    "Connected Supabase PostgreSQL database for scalable backend operations",
+    "Implemented secure password reset and account recovery workflow",
+    "Created analytics dashboard to monitor platform activity and property performance",
+    "Configured production deployment on Vercel with environment variable management"
+  ],
+},
 
   {
     id: 3,
