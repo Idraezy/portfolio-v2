@@ -54,7 +54,7 @@ export default function AboutSection() {
     },
     {
       company: "Chaindustry",
-      role: "Full Stack Developer Intern",
+      role: "Frontend Developer Intern",
       period: "2023 – Present",
       description: "Worked on real-world frontend projects in a collaborative development environment.",
     },
@@ -76,7 +76,7 @@ export default function AboutSection() {
   },
 
   {
-    title: "Backend Development",
+    title: "Backend (Working Knowledge)",
     skills: [
       { name: "Node.js", color: "text-green-500" },
       { name: "Express.js", color: "text-gray-300" },
@@ -86,7 +86,7 @@ export default function AboutSection() {
   },
 
   {
-    title: "Database",
+    title: "Database (Working Knowledge)",
     skills: [
       { name: "PostgreSQL", color: "text-blue-400" },
       { name: "Supabase", color: "text-green-400" },
@@ -141,11 +141,11 @@ export default function AboutSection() {
                   </div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: "easeOut" }} viewport={{ once: true, amount: 0.3 }} className="flex-1 text-center lg:text-left">
-                  <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-400"><h2> Passionate About Creating Scalable Web Applications</h2></h2>
-                  <p className="text-gray-400 leading-relaxed mb-6">I am a Full Stack Developer with experience building modern web applications from frontend interfaces to backend systems. <br />
-                     My expertise includes React.js, Next.js, TypeScript, Node.js, Express.js, Supabase, PostgreSQL, and RESTful APIs.
-                     I enjoy solving complex problems, writing clean and maintainable code, and developing scalable applications that provide exceptional user experiences. <br />
-                     Beyond full stack development, I also have experience with blockchain technologies, smart contracts, technical writing, and graphic design.</p>
+                  <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-400">Passionate About Creating Scalable Web Applications</h2>
+                  <p className="text-gray-400 leading-relaxed mb-6">I am a Frontend Developer with experience building modern, high-performance web applications. <br />
+                     My expertise includes React.js, Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+                     I enjoy solving complex problems, writing clean and maintainable code, and crafting interfaces that provide exceptional user experiences. <br />
+                     Beyond frontend development, I also have experience with blockchain technologies, smart contracts, technical writing, and graphic design.</p>
                   <div className="space-y-3">
                     <Info icon={<UserRound />} text="Idara Ubong Etim" />
                     <Info icon={<Mail />} text="idraezynoks@gmail.com" />

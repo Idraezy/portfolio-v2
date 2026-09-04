@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Whatsapp } from "iconsax-react";
 import { Mail,
    Github,
-    // Linkedin,
+    Linkedin,
     Twitter,
      Clock,
      MapPin, Send } from "lucide-react";
@@ -27,12 +27,12 @@ function Contact() {
       url: "https://github.com/Idraezy",
       color: "hover:text-blue-400"
     },
-    // {
-    //   name: "LinkedIn",
-    //   icon: Linkedin,
-    //   url: "https://www.Linkedin.com/in/etimidaraubong",
-    //   color: "hover:text-blue-400"
-    // },
+    {
+      name: "LinkedIn",
+      icon: Linkedin,
+      url: "https://www.linkedin.com/in/idara-etim",
+      color: "hover:text-blue-400"
+    },
     {
          name: "Telegram",
          icon: FaTelegramPlane,

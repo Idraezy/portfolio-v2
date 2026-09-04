@@ -8,7 +8,7 @@ import { ExternalLink, Github, Filter, Search, Code2, ArrowUp, Layers } from 'lu
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Dali Wears",
     description:
       "A full-featured e-commerce platform with cart functionality, payment integration, and admin dashboard.",
     technologies: [

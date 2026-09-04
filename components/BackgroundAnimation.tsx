@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const texts = [
-  "Full Stack Developer",
+  "Frontend Developer",
   "React & Next.js Developer",
-  "Node.js Developer",
+  "TypeScript Developer",
   "Blockchain Developer",
 ];
 

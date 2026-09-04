@@ -6,7 +6,7 @@ import {
   FileUser,
   Facebook,
   Twitter,
-  // Linkedin,
+  Linkedin,
   Github,
 } from "lucide-react";
 import { Whatsapp, Instagram, } from "iconsax-react";
@@ -15,7 +15,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const professions = [
-  "Full Stack Developer",
+  "Frontend Developer",
   "React & Next.js Developer",
   "Blockchain Developer",
   "Technical Writer",
@@ -69,7 +69,7 @@ export default function Home() {
     { icon: Whatsapp, href: "https://wa.me/2347045256955" },
     { icon: Twitter, href: "https://twitter.com/Idara_etimm" },
     { icon: FaTelegramPlane, href: "https://t.me/Idraezy" },
-    // { icon: Linkedin, href: "https://www.Linkedin.com/in/etimidaraubong" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/idara-etim" },
     { icon: Instagram, href: "https://instagram.com/idaraetimm" },
     { icon: Github, href: "https://github.com/Idraezy" },
     
@@ -134,15 +134,15 @@ export default function Home() {
             animate={{ opacity: 1 }}
           >
             <p className="mb-4">
-               I'm a Full Stack Developer specializing in modern web applications
-               using React.js, Next.js, TypeScript, Tailwind CSS, Node.js,
-               Express.js, PostgreSQL, and Supabase. I enjoy building scalable,
-               user-focused products from frontend interfaces to backend systems.
+               I'm a Frontend Developer specializing in modern web applications
+               using React.js, Next.js, TypeScript, Tailwind CSS, and Framer
+               Motion. I enjoy building scalable, user-focused interfaces with
+               clean code and smooth, high-performance interactions.
             </p>
 
             <p>
-               Beyond full stack development, I have experience with blockchain
-               technologies, smart contract development, technical writing, and
+               Beyond frontend development, I have experience with blockchain
+               technologies, smart contract integration, technical writing, and
                graphic design. I'm passionate about creating high-performance
                digital solutions that deliver real-world value.
             </p>
@@ -156,7 +156,6 @@ export default function Home() {
 >
           <motion.a
            href="mailto:idraezynoks@gmail.com"
-           onClick={scrollToContact}
             whileHover={{ scale: 1.05 }}
             className="border-2 border-orange-400 text-orange-400 px-4 py-2 sm:px-6 sm:py-3 
                font-semibold hover:bg-orange-400 hover:text-white 

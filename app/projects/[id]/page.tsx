@@ -25,7 +25,7 @@ import {
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Dali Wears",
     description:
       "A full-featured e-commerce platform with cart functionality, payment integration, and admin dashboard.",
     overview:

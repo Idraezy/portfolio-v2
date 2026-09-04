@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Idara Etim",
-  description: "Fullstack Developer & Blockchain Enthusiast",
+  description: "Frontend Developer & Blockchain Enthusiast",
   icons: {
     icon: "/prof.jpg",
   },
