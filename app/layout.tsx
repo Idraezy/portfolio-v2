@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import BackgroundAnimation from "@/components/BackgroundAnimation";
+import VisitorPing from "@/components/VisitorPing";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body
         className="bg-[#011C2A] text-gray-400"
       >
+        <VisitorPing />
         <Navbar />
         <BackgroundAnimation />
         {children}
