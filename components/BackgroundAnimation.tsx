@@ -7,6 +7,7 @@ const texts = [
   "Frontend Developer",
   "React & Next.js Developer",
   "TypeScript Developer",
+  "React Native Developer",
   "Blockchain Developer",
 ];
 

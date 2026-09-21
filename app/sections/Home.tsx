@@ -17,6 +17,7 @@ import { motion } from "framer-motion";
 const professions = [
   "Frontend Developer",
   "React & Next.js Developer",
+  "React Native Developer",
   "Blockchain Developer",
   "Technical Writer",
 ];
@@ -141,10 +142,11 @@ export default function Home() {
             </p>
 
             <p>
-               Beyond frontend development, I have experience with blockchain
-               technologies, smart contract integration, technical writing, and
-               graphic design. I'm passionate about creating high-performance
-               digital solutions that deliver real-world value.
+               Beyond web frontend development, I build React Native mobile apps
+               with Expo, and I have experience with blockchain technologies,
+               smart contract integration, technical writing, and graphic design.
+               I'm passionate about creating high-performance digital solutions
+               that deliver real-world value.
             </p>
           </motion.div>
 

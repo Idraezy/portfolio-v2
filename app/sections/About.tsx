@@ -76,12 +76,22 @@ export default function AboutSection() {
   },
 
   {
+    title: "Mobile Development",
+    skills: [
+      { name: "React Native", color: "text-cyan-400" },
+      { name: "Expo", color: "text-gray-300" },
+      { name: "NativeWind", color: "text-sky-400" },
+    ],
+  },
+
+  {
     title: "Backend (Working Knowledge)",
     skills: [
       { name: "Node.js", color: "text-green-500" },
       { name: "Express.js", color: "text-gray-300" },
       { name: "REST APIs", color: "text-purple-400" },
       { name: "Authentication", color: "text-red-400" },
+      { name: "Paystack", color: "text-emerald-400" },
     ],
   },
 
@@ -145,7 +155,7 @@ export default function AboutSection() {
                   <p className="text-gray-400 leading-relaxed mb-6">I am a Frontend Developer with experience building modern, high-performance web applications. <br />
                      My expertise includes React.js, Next.js, TypeScript, Tailwind CSS, and Framer Motion.
                      I enjoy solving complex problems, writing clean and maintainable code, and crafting interfaces that provide exceptional user experiences. <br />
-                     Beyond frontend development, I also have experience with blockchain technologies, smart contracts, technical writing, and graphic design.</p>
+                     I also build React Native mobile apps with Expo, and beyond that I have experience with blockchain technologies, smart contracts, technical writing, and graphic design.</p>
                   <div className="space-y-3">
                     <Info icon={<UserRound />} text="Idara Ubong Etim" />
                     <Info icon={<Mail />} text="idraezynoks@gmail.com" />
