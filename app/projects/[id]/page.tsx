@@ -18,11 +18,109 @@ import {
   Globe,
   Code2,
   Loader2,
+  ImageOff,
 } from "lucide-react";
 
 // ─── Project Data ─────────────────────────────────────────────────────────────
 
 const projects = [
+  {
+    id: 15,
+    title: "GetGigs",
+    description:
+      "A trust-first, location-based marketplace connecting people in Akwa Ibom State, Nigeria with verified local service providers.",
+    overview:
+      "GetGigs connects residents of Akwa Ibom State with verified local service providers — carpenters, plumbers, electricians, technicians, and more — and connects local businesses with workers. The foundation, public marketplace, and provider system are built: a full database schema with row-level security on every table, email/password auth, real category browsing, provider search and profiles, and an 8-step provider onboarding wizard with a dashboard for services, portfolio, availability, and verification. The customer request/quote/booking flow, an admin moderation dashboard, and business job postings are still ahead.",
+    technologies: ["React", "TypeScript", "Vite", "React Router", "Tailwind CSS", "Supabase"],
+    category: "Fullstack",
+    image: "",
+    screenshots: [],
+    liveUrl: "https://get-gigs-three.vercel.app/",
+    role: "Full-Stack Developer (Solo)",
+    status: "pending",
+    keyHighlights: [
+      "Designed a full Postgres schema with row-level security policies on every table",
+      "Built email/password authentication and a category-based provider marketplace",
+      "Built an 8-step provider onboarding wizard covering services, portfolio, availability, and verification",
+      "Implemented provider search, listings, and public profiles",
+      "Structured the codebase by role (public, auth, customer, provider, business, admin) for a growing feature set",
+    ],
+  },
+  {
+    id: 16,
+    title: "GetGigs — Mobile App",
+    description:
+      "The React Native companion app for GetGigs, sharing one Supabase backend with the website.",
+    overview:
+      "A React Native (Expo) client for GetGigs that talks to the same Supabase project as the web app — no separate backend. Currently at MVP: sign in/up (email and Google), discovering and searching nearby providers with device GPS, provider profiles, requesting a service with photos and location, a realtime messaging thread, in-app notifications, and profile management. Feed/stories, provider onboarding, the business dashboard, admin tools, job postings, and device push notifications are web-only or not yet built on mobile.",
+    technologies: ["React Native", "Expo", "TypeScript", "NativeWind", "React Navigation", "Supabase"],
+    category: "Mobile",
+    image: "",
+    screenshots: [],
+    role: "Mobile Developer (Solo)",
+    status: "pending",
+    keyHighlights: [
+      "Built sign in/sign up with email+password and Google auth",
+      "Implemented nearby-provider discovery using device GPS (expo-location)",
+      "Built a request-service flow with photo upload and GPS/LGA location",
+      "Added realtime messaging (conversation list + live thread) on top of Supabase Realtime",
+      "Shared the same Supabase schema and auth as the GetGigs website — no separate backend",
+    ],
+  },
+  {
+    id: 17,
+    title: "Dali Stores",
+    description:
+      "A separate, full-featured Dali Wears storefront rebuild — catalog, checkout, and an admin dashboard on Next.js and Supabase.",
+    overview:
+      "Dali Stores is a from-scratch rebuild of the Dali Wears storefront on Next.js (App Router), distinct from the original Dali Wears site. Customers browse the catalog, search and filter, add to cart and wishlist, check out with Paystack, track orders, leave reviews, and chat directly with the store. Admins manage products, orders, messages, users, and store settings from a dedicated dashboard, with Supabase handling auth, database, and storage, and a Telegram bot relaying login and message notifications.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Radix UI",
+      "Supabase",
+      "React Hook Form",
+      "Zod",
+      "Paystack",
+    ],
+    category: "Fullstack",
+    image: "",
+    screenshots: [],
+    liveUrl: "https://dali-store.vercel.app/",
+    role: "Full-Stack Developer (Solo)",
+    status: "live",
+    keyHighlights: [
+      "Built a full storefront: catalog browsing, search/filter, cart, and wishlist",
+      "Integrated Paystack for checkout with server-side payment verification",
+      "Built an admin dashboard for products, orders, messages, users, and store settings",
+      "Added order tracking and customer reviews",
+      "Implemented direct customer-to-store chat",
+      "Wired a Telegram bot to relay login, signup, and message notifications",
+      "Used cookie-based Supabase auth (@supabase/ssr) across server and client",
+    ],
+  },
+  {
+    id: 18,
+    title: "Dali Wears — Mobile App",
+    description:
+      "The React Native companion app for the original Dali Wears website, sharing its Supabase backend and Paystack checkout.",
+    overview:
+      "A React Native (Expo) app for the original Dali Wears website. It has no backend of its own — it uses the same Supabase project (auth, catalog data) as the website and calls the website's API routes over HTTPS for Telegram notifications and Paystack payment initialization/verification, so the website must be deployed for the app to log in, chat, or take payments.",
+    technologies: ["React Native", "Expo", "TypeScript", "React Navigation", "Supabase", "Paystack"],
+    category: "Mobile",
+    image: "",
+    screenshots: [],
+    role: "Mobile Developer (Solo)",
+    status: "pending",
+    keyHighlights: [
+      "Built a React Native client sharing auth and catalog data with the Dali Wears website via Supabase",
+      "Called the website's API routes for Telegram notifications and Paystack payment initialize/verify",
+      "Implemented image picking for profile and product-related flows",
+      "Set up EAS Build for installable Android APK distribution outside the Play Store",
+    ],
+  },
   {
     id: 1,
     title: "Dali Wears",
@@ -669,28 +767,35 @@ export default function ProjectDetailPage() {
                 <Layers className="w-5 h-5 text-orange-400" />
                 Screenshots
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {screenshots.map((src, i) => (
-                  <motion.div
-                    key={i}
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.2 }}
-                    onClick={() => setLightboxIndex(i)}
-                    className="relative group overflow-hidden rounded-xl cursor-zoom-in border border-orange-400/10 bg-[#012b40]"
-                  >
-                    <img
-                      src={src}
-                      alt={`Screenshot ${i + 1}`}
-                      className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                      <span className="opacity-0 group-hover:opacity-100 transition-opacity text-white text-sm font-semibold bg-black/60 px-3 py-1.5 rounded-full">
-                        Click to expand
-                      </span>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+              {screenshots.length > 0 ? (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {screenshots.map((src, i) => (
+                    <motion.div
+                      key={i}
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.2 }}
+                      onClick={() => setLightboxIndex(i)}
+                      className="relative group overflow-hidden rounded-xl cursor-zoom-in border border-orange-400/10 bg-[#012b40]"
+                    >
+                      <img
+                        src={src}
+                        alt={`Screenshot ${i + 1}`}
+                        className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                        <span className="opacity-0 group-hover:opacity-100 transition-opacity text-white text-sm font-semibold bg-black/60 px-3 py-1.5 rounded-full">
+                          Click to expand
+                        </span>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center gap-2 h-48 sm:h-56 rounded-xl border border-orange-400/10 bg-[#012b40] text-gray-500">
+                  <ImageOff className="w-5 h-5" />
+                  <span className="text-sm">Screenshots coming soon</span>
+                </div>
+              )}
             </motion.div>
 
             {/* Overview */}
@@ -778,12 +883,16 @@ export default function ProjectDetailPage() {
                       onClick={() => router.push(`/projects/${p.id}`)}
                       className="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-[#011C2A] transition-colors group text-left"
                     >
-                      <div className="w-12 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-gray-700">
-                        <img
-                          src={p.image}
-                          alt={p.title}
-                          className="w-full h-full object-cover"
-                        />
+                      <div className="w-12 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-gray-700 flex items-center justify-center">
+                        {p.image ? (
+                          <img
+                            src={p.image}
+                            alt={p.title}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <ImageOff className="w-4 h-4 text-gray-500" />
+                        )}
                       </div>
                       <div className="min-w-0">
                         <p className="text-sm font-semibold text-gray-200 group-hover:text-orange-400 transition-colors truncate">

@@ -3,9 +3,54 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence, Variants } from 'framer-motion';
-import { ExternalLink, Github, Filter, Search, Code2, ArrowUp, Layers } from 'lucide-react';
+import { ExternalLink, Github, Filter, Search, Code2, ArrowUp, Layers, ImageOff } from 'lucide-react';
 
 const projects = [
+  {
+    id: 15,
+    title: "GetGigs",
+    description:
+      "A trust-first, location-based marketplace connecting people in Akwa Ibom State, Nigeria with verified local service providers.",
+    technologies: ["React", "TypeScript", "Vite", "React Router", "Tailwind CSS", "Supabase"],
+    category: "Fullstack",
+    image: "",
+    liveUrl: "https://get-gigs-three.vercel.app/",
+  },
+  {
+    id: 16,
+    title: "GetGigs — Mobile App",
+    description:
+      "The React Native companion app for GetGigs, sharing one Supabase backend with the website.",
+    technologies: ["React Native", "Expo", "TypeScript", "NativeWind", "React Navigation", "Supabase"],
+    category: "Mobile",
+    image: "",
+  },
+  {
+    id: 17,
+    title: "Dali Stores",
+    description:
+      "A separate, full-featured Dali Wears storefront rebuild — catalog, checkout, and an admin dashboard on Next.js and Supabase.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Supabase",
+      "Paystack",
+    ],
+    category: "Fullstack",
+    image: "",
+    liveUrl: "https://dali-store.vercel.app/",
+  },
+  {
+    id: 18,
+    title: "Dali Wears — Mobile App",
+    description:
+      "The React Native companion app for the original Dali Wears website, sharing its Supabase backend and Paystack checkout.",
+    technologies: ["React Native", "Expo", "TypeScript", "React Navigation", "Supabase", "Paystack"],
+    category: "Mobile",
+    image: "",
+  },
   {
     id: 1,
     title: "Dali Wears",
@@ -324,7 +369,7 @@ const projects = [
   },
 ];
 
-const categories = ["All", "Fullstack", "Frontend","Blockchain","Design"];
+const categories = ["All", "Fullstack", "Frontend", "Mobile", "Blockchain", "Design"];
 
 const techDescriptions: Record<string, string> = {
   "Figma": "UI/UX Design Tool",
@@ -489,24 +534,33 @@ export default function Projects() {
 
               {/* Project Image */}
               <div className="relative h-40 sm:h-48 overflow-hidden bg-gray-700">
-                <motion.img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                  whileHover={{ scale: 1.15 }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
-                />
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-                <motion.div
-                  className="absolute inset-0 border-4 border-orange-400 rounded-lg opacity-0"
-                  whileHover={{ opacity: [0, 0.5, 0], scale: [1, 1.1, 1] }}
-                  transition={{ duration: 1, repeat: Infinity }}
-                />
+                {project.image ? (
+                  <>
+                    <motion.img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                      whileHover={{ scale: 1.15 }}
+                      transition={{ duration: 0.6, ease: "easeOut" }}
+                    />
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                      initial={{ opacity: 0 }}
+                      whileHover={{ opacity: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                    <motion.div
+                      className="absolute inset-0 border-4 border-orange-400 rounded-lg opacity-0"
+                      whileHover={{ opacity: [0, 0.5, 0], scale: [1, 1.1, 1] }}
+                      transition={{ duration: 1, repeat: Infinity }}
+                    />
+                  </>
+                ) : (
+                  <div className="flex h-full w-full flex-col items-center justify-center gap-2 text-gray-500">
+                    <ImageOff size={20} />
+                    <span className="text-xs">Screenshots coming soon</span>
+                  </div>
+                )}
               </div>
 
               {/* Project Content */}
